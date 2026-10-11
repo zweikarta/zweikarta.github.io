@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zweikarta</title>
+<meta name="description" content="Zweikarta is a two-person app studio in Berlin: a designer and a mobile developer making calm, useful apps. Makers of GeldSpace.">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/studio.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap topbar">
+    <a class="logo" href="./" aria-label="Zweikarta home">
+      <svg viewBox="0 0 34 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#3D5AFE"/><circle cx="23" cy="11" r="10" fill="#FFAE2B" style="mix-blend-mode:multiply"/></svg>
+      zweikarta
+    </a>
+    <nav aria-label="Main">
+      <a href="#apps">Apps</a>
+      <a href="#us" class="hide-sm">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker" style="color:var(--on-night-muted)">Independent app studio · Berlin</p>
+      <h1>Two makers.<br><span class="dim">One studio.</span></h1>
+      <p class="lede">We're a designer and a mobile developer. Together we make calm, useful apps for everyday life, and we look after them for the long run.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#apps">See our apps</a>
+        <a class="btn btn-ghost" href="#contact">Say hello</a>
+      </div>
+    </div>
+    <svg class="venn" viewBox="0 0 440 300" role="img" aria-label="Design and code overlap to make apps">
+      <defs><clipPath id="clip-l"><circle cx="150" cy="150" r="140"/></clipPath></defs>
+      <g class="l"><circle cx="150" cy="150" r="140" fill="#3D5AFE"/><text x="58" y="158" fill="#FFFFFF">Design</text></g>
+      <g class="r"><circle cx="290" cy="150" r="140" fill="#FFAE2B"/><text x="330" y="158" fill="#1A1204">Code</text></g>
+      <g class="lens"><circle cx="290" cy="150" r="140" fill="#F2F3F7" clip-path="url(#clip-l)"/><text class="mid" x="220" y="159" text-anchor="middle" fill="#0D1017">Apps</text></g>
+    </svg>
+  </div>
+</header>
+
+<main>
+  <section class="block" aria-labelledby="name-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="name-h">What's in a name</h2>
+        <p>Half German, half Sanskrit, like the two of us who started it.</p>
+      </div>
+      <div class="equation">
+        <div class="eq-card design"><div class="word">zwei</div><div class="lang">German</div><div class="mean">two</div></div>
+        <span class="op" aria-hidden="true">+</span>
+        <div class="eq-card code"><div class="word">kartā<span class="deva" lang="sa">कर्ता</span></div><div class="lang">Sanskrit</div><div class="mean">the one who makes</div></div>
+        <span class="op" aria-hidden="true">=</span>
+        <div class="eq-card result"><div class="word">zweikarta</div><div class="lang">Our studio</div><div class="mean">two who make things</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="apps" aria-labelledby="apps-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="apps-h">Our apps</h2>
+        <p>Small, focused apps for iPhone and Android. Each one does one job well.</p>
+      </div>
+      <article class="app-feature">
+        <div class="copy">
+          <span class="app-tag">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="27" fill="#FFFFFF"/><path d="M81.2 38.8 A30 30 0 1 0 90 60 H66" fill="none" stroke="#1F7A76" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="60" r="8" fill="#B84A35"/></svg>
+            GeldSpace · Coming soon
+          </span>
+          <h3>Bring your wealth into one clear space.</h3>
+          <p>See everything you own, minus what you owe, in one calm place. On your own, or with your partner: Mine stays private, Ours is shared.</p>
+          <div class="chips"><span class="chip">iPhone</span><span class="chip">Android</span><span class="chip">Made in Berlin</span></div>
+          <a class="btn btn-light" href="geldspace/">Discover GeldSpace →</a>
+        </div>
+        <img src="assets/geldspace/home-ours.png" width="295" height="613" alt="GeldSpace showing shared wealth in Ours, and how much it grew this month.">
+      </article>
+      <div class="next-app">
+        <strong>Next app</strong>
+        <span>In the works. Say hello if you'd like to hear first.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="us" aria-labelledby="us-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="us-h">Who we are</h2>
+        <p>A couple who build apps together. One of us shapes how they look and feel, the other makes them run.</p>
+      </div>
+      <div class="people">
+        <div class="person design">
+          <span class="avatar" aria-hidden="true">M</span>
+          <div><h3>Mohini</h3><p class="role">Designer</p><p>Shapes every screen, from the first sketch to the last pixel, so our apps feel calm and easy.</p></div>
+        </div>
+        <div class="person code">
+          <span class="avatar" aria-hidden="true">S</span>
+          <div><h3>Shrikant</h3><p class="role">Mobile developer</p><p>Builds our apps for iPhone and Android, and keeps them fast, reliable and safe.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="how-h">How we build</h2>
+      </div>
+      <div class="principles">
+        <div class="principle"><h3>Private by default</h3><p>We ask only for what an app needs to work. No ads, and we never sell your data.</p></div>
+        <div class="principle"><h3>Calm by design</h3><p>No noise, no pressure. Our apps take a few minutes and then let you get on with your day.</p></div>
+        <div class="principle"><h3>Built to last</h3><p>We're independent, so we look after our apps for years, not just until the next one.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h">Let's talk.</h2>
+    <a class="mail" href="mailto:hello@zweikarta.com">hello@zweikarta.com</a>
+    <p>Questions, ideas or feedback on our apps. We read every message.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Zweikarta · Berlin</span>
+    <nav aria-label="Legal"><a href="imprint/">Imprint</a><a href="privacy/">Website privacy</a><a href="geldspace/privacy/">GeldSpace privacy</a></nav>
+  </div>
+</footer>
+</body>
+</html>
