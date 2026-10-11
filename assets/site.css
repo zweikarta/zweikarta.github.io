@@ -64,6 +64,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: -0.02em; font-size: 19px; }
 .brand svg { width: 30px; height: 20px; flex: none; }
+.brand .lens { fill: var(--fg); } /* overlap of the mark: dark on light pages, light on dark */
 .site-header nav { display: flex; gap: 18px; font-size: 15px; }
 .site-header nav a { text-decoration: none; color: var(--muted); }
 .site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--fg); }

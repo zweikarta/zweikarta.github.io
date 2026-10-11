@@ -53,6 +53,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 800; letter-spacing: -0.0
 .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 24px; position: relative; z-index: 1; flex-wrap: wrap; }
 .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.03em; }
 .logo svg { width: 34px; height: 22px; }
+.logo .lens { fill: #F2F3F7; } /* overlap matches the "Apps" lens in the hero */
 .topbar nav { display: flex; gap: 22px; font-size: 15px; }
 .topbar nav a { text-decoration: none; color: var(--on-night-muted); }
 .topbar nav a:hover { color: var(--on-night); }
