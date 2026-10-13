@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeldSpace</title>
+<style>
+  body { margin: 0; background: #F2F2F7; color: #1C1C1E; font: 17px/1.4 -apple-system, "Inter", "Segoe UI", Roboto, sans-serif; }
+  @media (prefers-color-scheme: dark) { body { background: #000000; color: #FFFFFF; } }
+  main { max-width: 420px; margin: 0 auto; padding: 56px 16px; text-align: center; }
+</style>
+<script>
+  window.onload = function() {
+    // If we land here, the OS didn't intercept the Universal Link / App Link.
+    // In the future, this page could detect the OS and redirect to the App Store or Play Store.
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const path = window.location.pathname;
+
+    // For now, simply instruct the user
+    document.getElementById("message").innerHTML = "You've been invited to join a GeldSpace couple.<br><br>If you don't have the app installed, please download it from the App Store or Google Play.";
+  };
+</script>
+</head>
+<body>
+  <main>
+    <h1>GeldSpace</h1>
+    <p id="message">Opening your invitation...</p>
+  </main>
+</body>
+</html>
