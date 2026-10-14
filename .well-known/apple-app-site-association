@@ -2,8 +2,8 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["REPLACE_WITH_TEAM_ID.com.zweikarta.geldspace"],
-        "components": [{ "/": "/invite/*", "comment": "Partner invites (PAR-09)" }]
+        "appIDs": ["422W88AN3D.com.zweikarta.geldspace"],
+        "components": [{ "/": "/geldspace/invite/*", "comment": "Partner invites (PAR-09)" }]
       }
     ]
   }

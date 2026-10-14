@@ -3,28 +3,158 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GeldSpace</title>
-<style>
-  body { margin: 0; background: #F2F2F7; color: #1C1C1E; font: 17px/1.4 -apple-system, "Inter", "Segoe UI", Roboto, sans-serif; }
-  @media (prefers-color-scheme: dark) { body { background: #000000; color: #FFFFFF; } }
-  main { max-width: 420px; margin: 0 auto; padding: 56px 16px; text-align: center; }
-</style>
-<script>
-  window.onload = function() {
-    // If we land here, the OS didn't intercept the Universal Link / App Link.
-    // In the future, this page could detect the OS and redirect to the App Store or Play Store.
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const path = window.location.pathname;
-
-    // For now, simply instruct the user
-    document.getElementById("message").innerHTML = "You've been invited to join a GeldSpace couple.<br><br>If you don't have the app installed, please download it from the App Store or Google Play.";
-  };
-</script>
+<title>Your GeldSpace invite</title>
+<meta name="description" content="Your partner invited you to GeldSpace. Join them to build Ours together, while your own Mine stays private.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="../../assets/mark.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/studio.css">
 </head>
-<body>
-  <main>
-    <h1>GeldSpace</h1>
-    <p id="message">Opening your invitation...</p>
-  </main>
+<body class="gs-page">
+
+<!--
+  Invite links are https://zweikarta.com/geldspace/invite/CODE. With the app installed, Android App
+  Links and iOS Universal Links open the app instead. Otherwise GitHub Pages has no such file, so
+  404.html sends the browser here as /geldspace/invite/#CODE (the code stays in the fragment, which
+  never reaches the server).
+-->
+<header class="hero gs-hero">
+  <div class="wrap topbar">
+    <a class="logo" href="../../" aria-label="Zweikarta home">
+      <svg viewBox="0 0 34 22" aria-hidden="true"><defs><clipPath id="logo-clip"><circle cx="11" cy="11" r="10"/></clipPath></defs><circle cx="11" cy="11" r="10" fill="#3D5AFE"/><circle cx="23" cy="11" r="10" fill="#FFAE2B"/><circle class="lens" cx="23" cy="11" r="10" clip-path="url(#logo-clip)"/></svg>
+      zweikarta
+    </a>
+    <nav aria-label="Main">
+      <a href="../">About GeldSpace</a>
+      <a href="../#help">Help</a>
+    </nav>
+  </div>
+  <div class="wrap gs-invite">
+    <span class="app-tag">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="27" fill="#FFFFFF"/><path d="M81.2 38.8 A30 30 0 1 0 90 60 H66" fill="none" stroke="#1F7A76" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="60" r="8" fill="#B84A35"/></svg>
+      GeldSpace
+    </span>
+    <p class="gs-invite-kicker">You've been invited</p>
+    <h1>Your partner wants to build Ours with you.</h1>
+    <p class="lede">GeldSpace shows what you own in one calm place, and what you share together.</p>
+
+    <div class="code-card" id="card">
+      <p class="code-label">Your invite code</p>
+      <p class="code" id="code" aria-live="polite">······</p>
+      <p class="code-note" id="note">Works for 7 days</p>
+      <button type="button" class="code-copy" id="copy" hidden>Copy code</button>
+    </div>
+
+    <div class="ctas" id="stores">
+      <a class="btn btn-light" id="play" href="https://play.google.com/store/apps/details?id=com.zweikarta.geldspace">Get it on Google Play</a>
+      <span class="soon" id="appstore">App Store · coming soon</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="block" aria-labelledby="join-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="join-h">How to join</h2></div>
+      <div class="steps3 gs-steps">
+        <ol>
+          <li><div><h3>Get GeldSpace</h3><p>Install it from your app store and open it.</p></div></li>
+          <li><div><h3>Open Ours</h3><p>Tap <strong>Have an invite code?</strong></p></div></li>
+          <li><div><h3>Type the code</h3><p>The six characters above. Then you'll both see Ours.</p></div></li>
+        </ol>
+      </div>
+      <p class="note">Already have GeldSpace? Start at step 2.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="what-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="what-h">What joining means</h2></div>
+      <div class="spaces2 gs-what">
+        <div class="space2 mine">
+          <h3>You get your own Mine</h3>
+          <ul><li>Private to you. Your partner never sees it.</li></ul>
+        </div>
+        <div class="space2 ours">
+          <h3>Ours is what you share</h3>
+          <ul><li>Only what either of you puts there. You can both update it.</li><li>You can leave any time. Assets you add stay with you.</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>GeldSpace by <a href="../../">Zweikarta</a> · Berlin</span>
+    <nav aria-label="Legal"><a href="../../imprint/">Imprint</a><a href="../privacy/">Privacy</a><a href="../delete/">Delete account</a></nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Same alphabet and length as the app and functions/src/invites.ts (no 0, 1, I, L, O).
+  var ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+  var LENGTH = 6;
+  // Set once GeldSpace is on the App Store; until then iPhones see "coming soon".
+  var APP_STORE = "";
+
+  function fromUrl() {
+    var raw = location.hash.slice(1) ||
+      new URLSearchParams(location.search).get("code") ||
+      (location.pathname.split("/geldspace/invite/")[1] || "").split("/")[0];
+    try { raw = decodeURIComponent(raw); } catch (e) {}
+    return raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  }
+
+  var code = fromUrl();
+  var valid = code.length === LENGTH && code.split("").every(function (c) { return ALPHABET.indexOf(c) >= 0; });
+  var codeEl = document.getElementById("code");
+  var note = document.getElementById("note");
+  var copy = document.getElementById("copy");
+
+  if (valid) {
+    codeEl.textContent = code;
+    codeEl.setAttribute("aria-label", code.split("").join(" "));
+    copy.hidden = false;
+    copy.addEventListener("click", function () {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(code).then(function () {
+        copy.textContent = "Copied";
+        setTimeout(function () { copy.textContent = "Copy code"; }, 2000);
+      }).catch(function () {});
+    });
+  } else {
+    document.getElementById("card").classList.add("is-missing");
+    codeEl.textContent = code ? "Not a valid code" : "No code in this link";
+    note.textContent = "Ask your partner to send the invite again, or type the code from their message in GeldSpace.";
+  }
+
+  var ua = navigator.userAgent;
+  var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var android = /Android/.test(ua);
+  var play = document.getElementById("play");
+  var appStore = document.getElementById("appstore");
+
+  // The Play Store hands the code to the app after install (PAR-09, ADR-020).
+  if (valid) play.href += "&referrer=" + encodeURIComponent("invite=" + code);
+
+  if (APP_STORE) {
+    var a = document.createElement("a");
+    a.className = "btn btn-light";
+    a.href = APP_STORE;
+    a.textContent = "Download on the App Store";
+    // The app looks for the link on the clipboard on first launch, so the code survives the install.
+    a.addEventListener("click", function () {
+      if (valid && navigator.clipboard) navigator.clipboard.writeText(location.origin + "/geldspace/invite/" + code).catch(function () {});
+    });
+    appStore.replaceWith(a);
+    appStore = a;
+  }
+  if (ios) play.remove();
+  if (android) appStore.remove();
+})();
+</script>
 </body>
 </html>

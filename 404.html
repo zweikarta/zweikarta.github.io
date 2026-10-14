@@ -7,63 +7,14 @@
 <meta name="description" content="Page not found.">
 <link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css">
-<style id="invite-styles"></style>
 <script>
-  window.onload = function() {
-    const path = window.location.pathname;
-
-    // Intercept dynamic deep links for GeldSpace invites
-    if (path.startsWith('/geldspace/invite/')) {
-      document.title = "Your GeldSpace invite";
-
-      // Inject the styling from the original invite page
-      document.getElementById("invite-styles").innerHTML = `
-        :root { --bg: #F2F2F7; --card: #FFFFFF; --ink: #1C1C1E; --muted: #636366; --ours: #B84A35; --ours-tint: #FBEAE5; }
-        @media (prefers-color-scheme: dark) { :root { --bg: #000000; --card: #1C1C1E; --ink: #FFFFFF; --muted: #AEAEB2; --ours: #E07A63; --ours-tint: #3A211B; } }
-        body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.4 -apple-system, "Inter", "Segoe UI", Roboto, sans-serif; }
-        .invite-main { max-width: 420px; margin: 0 auto; padding: 56px 16px 32px; display: flex; flex-direction: column; gap: 16px; text-align: center; }
-        .invite-h1 { font-size: 28px; line-height: 34px; margin: 0; }
-        .invite-p { margin: 0; color: var(--muted); font-size: 15px; }
-        .invite-card { background: var(--card); border-radius: 20px; padding: 18px 16px; display: flex; flex-direction: column; gap: 8px; align-items: center; }
-        .invite-label { font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: .02em; }
-        .invite-code { font-size: 34px; font-weight: 700; letter-spacing: .18em; font-variant-numeric: tabular-nums; }
-        a.invite-button { display: block; height: 54px; line-height: 54px; border-radius: 9999px; background: var(--ours); color: #FFFFFF; font-weight: 600; text-decoration: none; }
-      `;
-
-      // Extract the invite code and render the UI
-      var alphabet = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
-      var raw = (path.split("/geldspace/invite/")[1] || "").split("/")[0].toUpperCase();
-      var code = raw.length === 6 && raw.split("").every(function (c) { return alphabet.indexOf(c) >= 0; }) ? raw : "";
-
-      document.body.innerHTML = `
-        <div class="invite-main">
-          <h1 class="invite-h1">Your partner wants to build Ours with you</h1>
-          <p class="invite-p">GeldSpace is a calm place for couples to see their wealth. Your own things stay private in Mine.</p>
-          <div class="invite-card">
-            <span class="invite-label">YOUR INVITE CODE</span>
-            <span class="invite-code" id="code">${code || '······'}</span>
-            <p class="invite-p">Works for 7 days</p>
-          </div>
-          <a class="invite-button" id="get" href="#">Get GeldSpace</a>
-          <p class="invite-p">Already have it? Open GeldSpace and enter the code in Ours.</p>
-        </div>
-      `;
-
-      // Wire up the App Store / Google Play routing and iOS clipboard trick
-      var ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
-      var link = location.origin + "/geldspace/invite/" + code;
-      var get = document.getElementById("get");
-
-      var play = "https://play.google.com/store/apps/details?id=com.zweikarta.geldspace" +
-        (code ? "&referrer=" + encodeURIComponent("invite=" + code) : "");
-      var appStore = "https://apps.apple.com/app/idREPLACE_WITH_APP_STORE_ID";
-
-      get.href = ios ? appStore : play;
-      get.addEventListener("click", function () {
-        if (ios && code && navigator.clipboard) navigator.clipboard.writeText(link).catch(function () {});
-      });
-    }
-  };
+  // GeldSpace invite links (/geldspace/invite/CODE) have no file on GitHub Pages. Without the app
+  // installed they land here; the invite page reads the code from the fragment, which never
+  // reaches the server.
+  (function () {
+    var m = location.pathname.match(/^\/geldspace\/invite\/([^\/]+)/);
+    if (m) location.replace("/geldspace/invite/#" + m[1]);
+  })();
 </script>
 </head>
 <body>
