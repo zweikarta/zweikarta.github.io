@@ -192,7 +192,7 @@ footer.foot a { color: var(--on-night-muted); }
 .steps3 p { margin: 0; color: var(--muted); }
 .steps3 img { display: block; width: 100%; max-width: 260px; height: auto; margin-inline: auto; }
 /* GeldSpace invite page (/geldspace/invite/#CODE) */
-.gs-invite { position: relative; z-index: 1; max-width: 40rem; padding-block: 24px 72px; }
+.gs-invite { position: relative; z-index: 1; max-width: 40rem; padding-block: 48px 72px; }
 .gs-invite h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
 .gs-invite .lede { margin: 20px 0 28px; }
 .gs-invite-kicker { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #CFE6E4; margin: 0 0 14px; }
