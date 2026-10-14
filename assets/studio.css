@@ -191,6 +191,22 @@ footer.foot a { color: var(--on-night-muted); }
 .steps3 h3 { font-size: 1.5rem; letter-spacing: -0.02em; margin: 10px 0 6px; }
 .steps3 p { margin: 0; color: var(--muted); }
 .steps3 img { display: block; width: 100%; max-width: 260px; height: auto; margin-inline: auto; }
+/* GeldSpace invite page (/geldspace/invite/#CODE) */
+.gs-invite { position: relative; z-index: 1; max-width: 40rem; padding-block: 48px 72px; }
+.gs-invite h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
+.gs-invite .lede { margin: 20px 0 28px; }
+.gs-invite-kicker { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #CFE6E4; margin: 0 0 14px; }
+.code-card { background: #FFFFFF; color: #11141B; border-radius: var(--r-lg); padding: 24px; margin-bottom: 24px; box-shadow: 0 24px 48px rgba(0,0,0,0.18); text-align: center; }
+.code-card p { margin: 0; }
+.code-label { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5B6172; }
+.code { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 11vw, 3.6rem); letter-spacing: 0.14em; line-height: 1.1; margin: 10px 0 6px !important; color: #B84A35; font-variant-numeric: tabular-nums; }
+.code-note { color: #5B6172; font-size: 15px; }
+.code-copy { margin-top: 16px; height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #DADDE5; background: #FFFFFF; color: #134B48; font: 600 15px var(--body); cursor: pointer; }
+.code-copy:hover { border-color: #134B48; }
+.code-copy:focus-visible { outline: 2px solid var(--saffron); outline-offset: 3px; }
+.code-card.is-missing .code { font-size: clamp(1.6rem, 6vw, 2rem); letter-spacing: -0.02em; color: #11141B; }
+.gs-steps { grid-template-columns: minmax(0, 1fr); max-width: 40rem; }
+.gs-what .space2 h3 { font-size: 1.7rem; }
 .cols2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 32px; min-width: 0; }
 .panel h3 { font-size: 1.6rem; letter-spacing: -0.025em; margin-bottom: 12px; }
