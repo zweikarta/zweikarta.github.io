@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.zweikarta.geldspace",
+      "package_name": "com.zweikarta.geldspace.app",
       "sha256_cert_fingerprints": [
         "A8:B8:AD:9A:48:4A:17:49:66:16:77:88:41:C5:C7:4E:E1:9E:BD:DD:56:F5:93:65:00:4E:68:74:9D:52:BA:5B"
       ]
