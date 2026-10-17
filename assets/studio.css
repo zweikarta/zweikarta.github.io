@@ -199,7 +199,7 @@ footer.foot a { color: var(--on-night-muted); }
 .code-card { background: #FFFFFF; color: #11141B; border-radius: var(--r-lg); padding: 24px; margin-bottom: 24px; box-shadow: 0 24px 48px rgba(0,0,0,0.18); text-align: center; }
 .code-card p { margin: 0; }
 .code-label { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5B6172; }
-.code { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 11vw, 3.6rem); letter-spacing: 0.14em; line-height: 1.1; margin: 10px 0 6px !important; color: #B84A35; font-variant-numeric: tabular-nums; }
+.code-card .code { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 11vw, 3.6rem); letter-spacing: 0.14em; line-height: 1.1; margin: 10px 0 6px !important; color: #B84A35; font-variant-numeric: tabular-nums; }
 .code-note { color: #5B6172; font-size: 15px; }
 .code-copy { margin-top: 16px; height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid #DADDE5; background: #FFFFFF; color: #134B48; font: 600 15px var(--body); cursor: pointer; }
 .code-copy:hover { border-color: #134B48; }
