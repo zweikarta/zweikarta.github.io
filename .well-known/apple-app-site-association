@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["422W88AN3D.com.zweikarta.geldspace"],
+        "appIDs": ["VTXN82NNNC.com.zweikarta.geldspace.app"],
         "components": [{ "/": "/geldspace/invite/*", "comment": "Partner invites (PAR-09)" }]
       }
     ]
