@@ -87,8 +87,11 @@
   // Same alphabet and length as the app and functions/src/invites.ts (no 0, 1, I, L, O).
   var ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
   var LENGTH = 6;
-  // Set once GeldSpace is on the App Store; until then iPhones see "coming soon".
-  var APP_STORE = "";
+  // GeldSpace's App Store id (App Store Connect › App Information › Apple ID). Set APP_STORE_LIVE
+  // to true once the listing is live; until then iPhones see "coming soon" (the store link would 404).
+  var APP_STORE_ID = "6824031504";
+  var APP_STORE_LIVE = false;
+  var APP_STORE = APP_STORE_LIVE ? "https://apps.apple.com/app/id" + APP_STORE_ID : "";
 
   function fromUrl() {
     var raw = location.hash.slice(1) ||
