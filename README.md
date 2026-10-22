@@ -14,6 +14,9 @@ Static site for the Zweikarta studio and its apps. Plain HTML and one CSS file: 
 
 A new app gets a folder `/<app>/` with its own `privacy/` and, if it has accounts, `delete/`.
 
+## SEO
+Each page has a canonical link and Open Graph tags; the home page also has Organization and WebSite structured data. When you add or change a page, add it to `sitemap.xml` (with a new `lastmod`). Pages that should stay out of search, like the invite page and the 404, carry `<meta name="robots" content="noindex">`.
+
 ## Keep in mind
 1. Get the GeldSpace privacy policy reviewed by a lawyer (see `play-console/privacy-policy.md` for open assumptions A1-A8).
 2. The GeldSpace privacy text comes from `play-console/privacy-policy.md`. Change both together so the website and the Play forms stay consistent.
