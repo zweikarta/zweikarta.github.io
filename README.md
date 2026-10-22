@@ -18,7 +18,7 @@ A new app gets a folder `/<app>/` with its own `privacy/` and, if it has account
 Google Analytics 4 runs only with consent. The measurement ID is `GA_ID` at the top of `assets/consent.js`; if it is set back to the placeholder `G-XXXXXXXXXX`, the script does nothing. A new page gets `<script src=".../assets/consent.js" defer></script>` in its head. If analytics changes, update `privacy/index.html` too.
 
 ## SEO
-Each page has a canonical link and Open Graph tags; the home page also has Organization and WebSite structured data. When you add or change a page, add it to `sitemap.xml` (with a new `lastmod`). Pages that should stay out of search, like the invite page and the 404, carry `<meta name="robots" content="noindex">`.
+Each page has a canonical link and Open Graph tags; the home page also has Organization and WebSite structured data. When you add or change a page, add it to `sitemap.xml` (with a new `lastmod`). Link preview images (1200×630) are in `assets/og/`: `studio.jpg` for studio and legal pages, `geldspace.jpg` for GeldSpace pages. Pages that should stay out of search, like the invite page and the 404, carry `<meta name="robots" content="noindex">`.
 
 ## Keep in mind
 1. Get the GeldSpace privacy policy reviewed by a lawyer (see `play-console/privacy-policy.md` for open assumptions A1-A8).
