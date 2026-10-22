@@ -1,6 +1,6 @@
 # zweikarta.com
 
-Static site for the Zweikarta studio and its apps. Plain HTML and one CSS file: no build step, no cookies, no analytics, nothing loaded from other servers.
+Static site for the Zweikarta studio and its apps. Plain HTML and CSS, no build step. The only third-party code is Google Analytics, loaded by `assets/consent.js` only after the visitor clicks "Allow analytics". The invite and 404 pages never load it, because their URLs can carry invite codes.
 
 ## Pages
 | URL | File |
@@ -13,6 +13,9 @@ Static site for the Zweikarta studio and its apps. Plain HTML and one CSS file: 
 | `/privacy/` | `privacy/index.html` (privacy notice for the website itself) |
 
 A new app gets a folder `/<app>/` with its own `privacy/` and, if it has accounts, `delete/`.
+
+## Analytics
+Google Analytics 4 runs only with consent. The measurement ID is `GA_ID` at the top of `assets/consent.js`; while it is the placeholder `G-XXXXXXXXXX`, the script does nothing. A new page gets `<script src=".../assets/consent.js" defer></script>` in its head. If analytics changes, update `privacy/index.html` too.
 
 ## SEO
 Each page has a canonical link and Open Graph tags; the home page also has Organization and WebSite structured data. When you add or change a page, add it to `sitemap.xml` (with a new `lastmod`). Pages that should stay out of search, like the invite page and the 404, carry `<meta name="robots" content="noindex">`.
