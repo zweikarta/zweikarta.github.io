@@ -2,7 +2,7 @@
    Nothing is sent to Google before that, and nothing at all while GA_ID is still the placeholder.
    The choice is kept in localStorage; "Cookie settings" in the footer asks again. */
 (function () {
-  var GA_ID = "G-XXXXXXXXXX"; // GA4 measurement ID of the zweikarta.com web stream
+  var GA_ID = "G-CKH9K1EJZM"; // GA4 measurement ID of the zweikarta.com web stream
   var KEY = "zk-analytics-consent"; // "yes" or "no"
   if (!/^G-[A-Z0-9]+$/.test(GA_ID) || GA_ID === "G-XXXXXXXXXX") return;
 
