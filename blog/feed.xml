@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Zweikarta blog</title>
+  <link>https://zweikarta.com/blog/</link>
+  <atom:link href="https://zweikarta.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Money, couples and calm apps, from the makers of GeldSpace.</description>
+  <language>en</language>
+  <item>
+    <title>How to manage money as a couple without merging everything</title>
+    <link>https://zweikarta.com/blog/manage-money-as-a-couple/</link>
+    <guid>https://zweikarta.com/blog/manage-money-as-a-couple/</guid>
+    <pubDate>Sun, 25 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Most couples keep some money separate. Why money gets hard as a couple, three ways to set it up, and the small monthly habits that keep you on the same page.</description>
+  </item>
+</channel>
+</rss>
