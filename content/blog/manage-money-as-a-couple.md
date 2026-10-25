@@ -2,7 +2,7 @@
 title: How to manage money as a couple, without merging everything
 seo_title: How to manage money as a couple without merging everything
 description: Most couples keep some money separate. Why money gets hard as a couple, three ways to set it up, and the small monthly habits that keep you on the same page.
-date: 2026-10-27
+date: 2026-10-25
 app: geldspace
 image: cover.jpg
 image_alt: Two overlapping circles labelled Mine, Ours and Mine: a picture of shared and private money in a couple.
