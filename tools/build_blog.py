@@ -59,6 +59,12 @@ LOGO = ('<svg viewBox="0 0 34 22" aria-hidden="true"><defs><clipPath id="logo-cl
         '<circle class="lens" cx="23" cy="11" r="10" clip-path="url(#logo-clip)"/></svg>')
 
 
+def css_version():
+    # Changes whenever studio.css changes, so browsers never use an old cached copy.
+    import hashlib
+    return hashlib.sha1((ROOT / "assets" / "studio.css").read_bytes()).hexdigest()[:8]
+
+
 def esc(s):
     return html.escape(s, quote=True)
 
@@ -182,7 +188,7 @@ def head(title, description, url, image, image_alt, og_type, extra=""):
 <link rel="alternate" type="application/rss+xml" title="Zweikarta blog" href="{SITE}/blog/feed.xml">
 {extra}<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/studio.css">
+<link rel="stylesheet" href="/assets/studio.css?v={css_version()}">
 <script src="/assets/consent.js" defer></script>
 </head>
 <body class="blog-page">
