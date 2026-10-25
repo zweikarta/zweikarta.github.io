@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Zweikarta blog</title>
+  <link>https://zweikarta.com/blog/</link>
+  <atom:link href="https://zweikarta.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Money, couples and calm apps, from the makers of GeldSpace.</description>
+  <language>en</language>
+  <item>
+    <title>Money date for couples: a 10-minute monthly check-in (20 questions)</title>
+    <link>https://zweikarta.com/blog/money-date-for-couples/</link>
+    <guid>https://zweikarta.com/blog/money-date-for-couples/</guid>
+    <pubDate>Tue, 27 Oct 2026 08:00:00 +0000</pubDate>
+    <description>A money date is a short, regular money talk for couples. How to run one in ten minutes, what to prepare, and 20 questions that keep it calm.</description>
+  </item>
+</channel>
+</rss>
