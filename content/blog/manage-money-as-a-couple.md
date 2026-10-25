@@ -52,12 +52,14 @@ There's no right answer here. What matters is that you both chose it, and that y
 
 **Keep privacy, not secrets.** Having money of your own is healthy. Hiding a debt is not. The difference is that privacy is something you both agreed on.
 
+::: app ours.png
 ## Where GeldSpace fits in
-
-![The Ours view in GeldSpace: shared wealth, what you own and what you owe together.](ours.png "Ours: only what you both chose to share.")
 
 We're Zweikarta, a small app studio in Berlin, and we built GeldSpace for exactly this.
 
-Everything you add lives in **Mine**, which only you can see, or in **Ours**, which you share. Your partner never sees your Mine. Once a month GeldSpace reminds you both, last month's numbers are already filled in, and the check-in takes a couple of minutes. When you've both finished, you see how Ours changed and get three questions for a short money date. There are no bank logins: you type or confirm every number yourself.
+Everything you add lives in **Mine**, which only you can see, or in **Ours**, which you share. Your partner never sees your Mine.
 
-It works on your own too, and it's coming soon to iPhone and Android.
+Once a month GeldSpace reminds you both, last month's numbers are already filled in, and the check-in takes a couple of minutes. When you've both finished, you see how Ours changed and get three questions for a short money date. There are no bank logins: you type or confirm every number yourself.
+
+It works just as well on your own.
+:::

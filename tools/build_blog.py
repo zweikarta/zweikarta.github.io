@@ -23,6 +23,9 @@ A post starts with a front matter block:
     draft: true (optional: skipped by the build)
     ---
 
+A closing block about the app goes between `::: app <phone screenshot>` and `:::`. It is
+shown as a card in the app's colours with the screenshot and a link to the app page.
+
 The body is a small Markdown subset: ## and ### headings, paragraphs, - and 1. lists,
 **bold**, *italic*, [links](url) and images on their own line:
 
@@ -221,10 +224,29 @@ def build_post(p):
     slug = p["slug"]
     url = f"{SITE}/blog/{slug}/"
     image = f"{SITE}/assets/blog/{slug}/{p['image']}"
-    body, toc = render_body(p["body"], slug)
+    app = APPS.get(p.get("app", ""))
+    app_block = ""
+    m = re.search(r"^::: app (\S+)\n(.*?)^:::$", p["body"], re.S | re.M)
+    md = p["body"]
+    if m:
+        inner, inner_toc = render_body(m.group(2), slug)
+        src = m.group(1)
+        w, h = image_size(ROOT / "assets" / "blog" / slug / src)
+        app_block = f"""
+  <aside class="post-app" aria-label="{app['name']}">
+    <div class="post-app-copy">
+{inner}
+      <a class="btn btn-light" href="{app['url']}">{esc(app['cta'])}</a>
+      <p class="post-app-note">{esc(app['status'])}</p>
+    </div>
+    <img src="/assets/blog/{slug}/{src}" width="{w}" height="{h}" alt="{esc(app['name'])} on a phone" loading="lazy" decoding="async">
+  </aside>"""
+        md = p["body"][:m.start()] + p["body"][m.end():]
+    body, toc = render_body(md, slug)
+    if m:
+        toc += inner_toc
     words = len(re.findall(r"\w+", p["body"]))
     minutes = max(1, round(words / 220))
-    app = APPS.get(p.get("app", ""))
     schema = {
         "@context": "https://schema.org",
         "@graph": [
@@ -256,8 +278,8 @@ def build_post(p):
     extra = (f'<meta property="article:published_time" content="{p["date"]}">\n'
              f'<meta property="article:modified_time" content="{p["updated"]}">\n' + ld(schema))
     toc_html = "".join(f'<li><a href="#{i}">{inline(t)}</a></li>' for i, t in toc)
-    cta = ""
-    if app:
+    cta = app_block
+    if app and not app_block:
         cta = f"""
   <aside class="post-cta" aria-label="{app['name']}">
     <p class="kicker">From the makers of this blog</p>

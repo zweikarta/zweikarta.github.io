@@ -288,3 +288,17 @@ footer.foot a { color: var(--on-night-muted); }
   .post-body figure.phone { float: none; width: auto; max-width: 240px; margin: 28px auto; }
   .post-cta { padding: 28px 24px; }
 }
+.post-app { clear: both; margin-top: 64px; display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 36px; align-items: end; border-radius: var(--r-lg); padding: 40px 40px 0; overflow: hidden; color: #fff;
+  background: radial-gradient(120% 120% at 100% 100%, #B84A35 0%, rgba(184,74,53,0) 55%), linear-gradient(135deg, #1F7A76, #134B48); }
+.post-app-copy { padding-bottom: 40px; min-width: 0; }
+.post-app h2 { font-size: clamp(1.8rem, 3.6vw, 2.3rem); line-height: 1.05; margin: 0 0 16px; }
+.post-app p { color: #E3F1F0; margin: 0 0 14px; font-size: 1.02rem; line-height: 1.6; }
+.post-app strong { color: #fff; }
+.post-app .btn { margin-top: 10px; }
+.post-app .post-app-note { font-size: 14px; margin: 14px 0 0; color: #CFE6E4; }
+.post-app img { display: block; width: 100%; height: auto; margin-bottom: -90px; filter: drop-shadow(0 24px 36px rgba(0,0,0,0.3)); }
+@media (max-width: 700px) {
+  .post-app { grid-template-columns: 1fr; padding: 32px 24px 0; }
+  .post-app-copy { padding-bottom: 8px; }
+  .post-app img { max-width: 220px; margin: 0 auto -110px; }
+}
