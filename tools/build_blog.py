@@ -267,7 +267,7 @@ def build_post(p):
                 "inLanguage": "en",
                 "wordCount": words,
                 "mainEntityOfPage": url,
-                "author": {"@id": f"{SITE}/#org"},
+                "author": {"@type": "Organization", "@id": f"{SITE}/#org", "name": "Zweikarta", "url": f"{SITE}/"},
                 "publisher": {"@type": "Organization", "@id": f"{SITE}/#org", "name": "Zweikarta",
                               "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/mark.svg"}},
             },
