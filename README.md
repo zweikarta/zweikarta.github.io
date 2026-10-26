@@ -16,7 +16,7 @@ Static site for the Zweikarta studio and its apps. Plain HTML and CSS, no build 
 A new app gets a folder `/<app>/` with its own `privacy/` and, if it has accounts, `delete/`.
 
 ## Blog
-Posts are Markdown files in `content/blog/<slug>.md`, with images in `assets/blog/<slug>/`. Run `python3 tools/build_blog.py` (no dependencies) to write `blog/<slug>/index.html`, `blog/index.html`, `blog/feed.xml` and the blog entries in `sitemap.xml`, then commit the output. The front matter and the supported Markdown are described at the top of the script.
+Posts are Markdown files in `content/blog/<slug>.md`, with images in `assets/blog/<slug>/`. Run `python3 tools/build_blog.py` (no dependencies) to write `blog/<slug>/index.html`, `blog/index.html`, `blog/feed.xml` and the blog entries in `sitemap.xml`, then commit the output. Before building, run `python3 tools/optimize_images.py` (needs Pillow) to make WebP copies of new images; the build serves them with srcset. The front matter and the supported Markdown are described at the top of the script.
 
 ## Analytics
 Google Analytics 4 runs only with consent. The measurement ID is `GA_ID` at the top of `assets/consent.js`; if it is set back to the placeholder `G-XXXXXXXXXX`, the script does nothing. A new page gets `<script src=".../assets/consent.js" defer></script>` in its head. If analytics changes, update `privacy/index.html` too.

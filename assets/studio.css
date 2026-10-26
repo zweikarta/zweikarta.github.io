@@ -302,3 +302,4 @@ footer.foot a { color: var(--on-night-muted); }
   .post-app-copy { padding-bottom: 8px; }
   .post-app img { max-width: 220px; margin: 0 auto -110px; }
 }
+.post-cover picture, .post-body picture, .post-card picture, .post-app picture { display: block; }

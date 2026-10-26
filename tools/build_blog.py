@@ -83,6 +83,19 @@ def image_size(path):
     raise ValueError(f"unknown image format: {path}")
 
 
+def picture(slug, src, w, h, alt, sizes, extra=""):
+    """An <img>, wrapped in <picture> with WebP sources when tools/optimize_images.py made them."""
+    folder = ROOT / "assets" / "blog" / slug
+    stem = Path(src).stem
+    variants = sorted((int(f.stem.rsplit("-", 1)[1]), f.name) for f in folder.glob(f"{stem}-*.webp")
+                      if f.stem.rsplit("-", 1)[1].isdigit())
+    img = f'<img src="/assets/blog/{slug}/{src}" width="{w}" height="{h}" alt="{esc(alt)}"{extra}>'
+    if not variants:
+        return img
+    srcset = ", ".join(f"/assets/blog/{slug}/{name} {vw}w" for vw, name in variants)
+    return f'<picture><source type="image/webp" srcset="{srcset}" sizes="{sizes}">{img}</picture>'
+
+
 def inline(text):
     text = esc(text)
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
@@ -127,7 +140,8 @@ def render_body(md, slug):
             w, h = image_size(ROOT / "assets" / "blog" / slug / src)
             loading = "" if first_image else ' loading="lazy"'
             first_image = False
-            fig = f'<img src="/assets/blog/{slug}/{src}" width="{w}" height="{h}" alt="{esc(alt)}"{loading} decoding="async">'
+            sizes = "250px" if h > w else "(max-width: 46rem) 100vw, 736px"
+            fig = picture(slug, src, w, h, alt, sizes, f'{loading} decoding="async"')
             if caption:
                 fig += f"<figcaption>{inline(caption)}</figcaption>"
             out.append(f'<figure class="{"phone" if h > w else "wide"}">{fig}</figure>')
@@ -245,7 +259,7 @@ def build_post(p):
       <a class="btn btn-light" href="{app['url']}">{esc(app['cta'])}</a>
       <p class="post-app-note">{esc(app['status'])}</p>
     </div>
-    <img src="/assets/blog/{slug}/{src}" width="{w}" height="{h}" alt="{esc(app['name'])} on a phone" loading="lazy" decoding="async">
+    {picture(slug, src, w, h, app['name'] + " on a phone", "250px", ' loading="lazy" decoding="async"')}
   </aside>"""
         md = p["body"][:m.start()] + p["body"][m.end():]
     body, toc = render_body(md, slug)
@@ -301,7 +315,7 @@ def build_post(p):
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a></nav>
   <h1>{inline(p['title'])}</h1>
   <p class="post-meta"><time datetime="{p['date']}">{nice_date(p['date'])}</time> · {minutes} min read · By Zweikarta</p>
-  <figure class="post-cover"><img src="/assets/blog/{slug}/{p['image']}" width="1200" height="630" alt="{esc(p['image_alt'])}" fetchpriority="high"></figure>
+  <figure class="post-cover">{picture(slug, p['image'], 1200, 630, p['image_alt'], "(max-width: 46rem) 100vw, 736px", ' fetchpriority="high"')}</figure>
   <nav class="post-toc" aria-label="In this post"><p class="kicker">In this post</p><ol>{toc_html}</ol></nav>
   <div class="post-body">
 {body}
@@ -333,7 +347,7 @@ def build_index(posts):
     cards = "".join(f"""
     <li class="post-card">
       <a href="/blog/{p['slug']}/">
-        <img src="/assets/blog/{p['slug']}/{p['image']}" width="1200" height="630" alt="" loading="lazy" decoding="async">
+        {picture(p['slug'], p['image'], 1200, 630, "", "(max-width: 760px) 100vw, 400px", ' loading="lazy" decoding="async"')}
         <span class="post-card-text">
           <time datetime="{p['date']}">{nice_date(p['date'])}</time>
           <strong>{inline(p['title'])}</strong>
