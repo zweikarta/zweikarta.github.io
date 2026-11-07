@@ -50,7 +50,8 @@ APPS = {
         "url": "/geldspace/",
         "pitch": "Your wealth in one calm place, alone or as a couple. Mine stays private, Ours is shared, and a two-minute monthly check-in keeps it fresh.",
         "cta": "See how GeldSpace works",
-        "status": "Coming soon to iPhone and Android.",
+        "store": "https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504",
+        "status": "Now on the App Store for iPhone. Android coming soon.",
     }
 }
 
@@ -67,6 +68,14 @@ def css_version():
 
 def esc(s):
     return html.escape(s, quote=True)
+
+
+def status_html(app):
+    # Links the words "App Store" in the status line to the live listing.
+    text = esc(app['status'])
+    if app.get('store'):
+        text = text.replace('App Store', f'<a href="{esc(app["store"])}">App Store</a>', 1)
+    return text
 
 
 def image_size(path):
@@ -257,7 +266,7 @@ def build_post(p):
     <div class="post-app-copy">
 {inner}
       <a class="btn btn-light" href="{app['url']}">{esc(app['cta'])}</a>
-      <p class="post-app-note">{esc(app['status'])}</p>
+      <p class="post-app-note">{status_html(app)}</p>
     </div>
     {picture(slug, src, w, h, app['name'] + " on a phone", "250px", ' loading="lazy" decoding="async"')}
   </aside>"""
@@ -306,7 +315,7 @@ def build_post(p):
     <h2>{app['name']}</h2>
     <p>{esc(app['pitch'])}</p>
     <a class="btn btn-light" href="{app['url']}">{esc(app['cta'])}</a>
-    <p class="post-cta-note">{esc(app['status'])}</p>
+    <p class="post-cta-note">{status_html(app)}</p>
   </aside>"""
     page = head(f"{p['seo_title']} · Zweikarta", p["description"], url, image, p["image_alt"], "article", extra)
     page += f"""
