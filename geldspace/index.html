@@ -20,9 +20,10 @@
 <link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
 <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/studio.css">
+<link rel="stylesheet" href="../assets/geldspace.css">
 <script src="../assets/consent.js" defer></script>
 </head>
-<body class="gs-page">
+<body class="gs-page gsx">
 
 <header class="hero gs-hero">
   <div class="wrap topbar">
@@ -31,7 +32,7 @@
       zweikarta
     </a>
     <nav aria-label="Main">
-      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
       <a href="#faq" class="hide-sm">Questions</a>
       <a href="#help">Help</a>
     </nav>
@@ -43,89 +44,117 @@
         GeldSpace
       </span>
       <h1>Bring your wealth into one clear space.</h1>
-      <p class="lede">Stocks, gold, property, cash and loans in one calm view. Use it on your own, or with your partner.</p>
+      <p class="lede">See everything you own, minus what you owe, and watch it grow. On your own, or together with your partner.</p>
       <div class="ctas">
-        <a class="btn btn-light" href="https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504">Download on the App Store</a>
+        <a class="btn btn-light" href="https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9c-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.8-4.1zM14 5.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>Download on the App Store</a>
         <span class="soon">Google Play · coming soon</span>
       </div>
+      <ul class="hero-proof">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/></svg>Shared wealth, private Mine</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/></svg>No bank logins</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/></svg>2 minutes a month</li>
+      </ul>
     </div>
-    <img src="../assets/geldspace/home-mine.png" width="295" height="613" alt="GeldSpace Home: your wealth, what you own and what you owe, and how it grew this month.">
+    <div class="phones">
+      <img class="back" src="../assets/geldspace/home-ours.png" width="295" height="613" alt="" loading="lazy">
+      <img class="front" src="../assets/geldspace/home-mine.png" width="295" height="613" alt="GeldSpace Home: your wealth, what you own and what you owe, and how it grew this month.">
+    </div>
   </div>
 </header>
 
 <main>
-  <section class="block">
+  <section class="block" aria-labelledby="why-h">
     <div class="wrap">
-      <p class="kicker">Why GeldSpace</p>
-      <p class="intro">Most people own things in many places: a broker, a savings account, some gold, a flat. Each app shows one slice. <em>GeldSpace brings it together, so you always know what you have and how it's growing.</em></p>
+      <div class="section-head wide">
+        <h2 id="why-h">Why people use GeldSpace</h2>
+        <p>Your money lives in many places. GeldSpace shows the whole picture.</p>
+      </div>
+      <div class="values">
+        <div class="value"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></div><h3>Everything in one view</h3><p>Stocks, gold, property, cash, crypto and loans, added up into one number.</p></div>
+        <div class="value"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-4 4 3 6-7"/></svg></div><h3>See it grow</h3><p>Track how your wealth changes, month by month.</p></div>
+        <div class="value warm"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Two minutes a month</h3><p>A gentle reminder, last month's values filled in. One tap for what didn't change.</p></div>
+        <div class="value warm"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div><h3>Made for couples</h3><p>Share what's shared. Keep what's yours private.</p></div>
+      </div>
     </div>
   </section>
 
-  <section class="block" aria-labelledby="spaces-h">
+  <section class="block" id="features" aria-label="Features">
+    <div class="wrap">
+      <div class="show mine">
+        <div class="txt">
+          <span class="tag">Home</span>
+          <h2>Know where you stand, at a glance.</h2>
+          <p class="sub">Open the app and your net worth is right there, with how much it grew this month.</p>
+          <ul class="ticks">
+            <li>What you own, what you owe, and the difference</li>
+            <li>A growth chart that fills in as you check in</li>
+            <li>Works in your main currency</li>
+          </ul>
+        </div>
+        <div class="shot"><img src="../assets/geldspace/home-mine.png" width="295" height="613" alt="Home: your wealth of €431,430, up €3,250 this month." loading="lazy"></div>
+      </div>
+
+      <div class="show ours flip">
+        <div class="txt">
+          <span class="tag">Mine and Ours</span>
+          <h2>Share what's shared. Keep what's yours.</h2>
+          <div class="split">
+            <div class="m"><b>Mine</b><span>Only you see it. Not the names, not the values, not even how many.</span></div>
+            <div class="o"><b>Ours</b><span>Shared wealth you both see and update.</span></div>
+          </div>
+          <ul class="ticks">
+            <li>Move your items between Mine and Ours anytime</li>
+            <li>See who changed what, and when</li>
+            <li>No partner? It works fully on your own</li>
+          </ul>
+        </div>
+        <div class="shot"><img src="../assets/geldspace/home-ours.png" width="295" height="613" alt="Ours: shared wealth of €325,800 that both partners see." loading="lazy"></div>
+      </div>
+
+      <div class="show plain">
+        <div class="txt">
+          <span class="tag">Monthly</span>
+          <h2>A calm money moment, once a month.</h2>
+          <p class="sub">A reminder on the day you choose. Most values are already filled in, so it takes about two minutes.</p>
+          <ul class="ticks">
+            <li>A short recap of how Ours grew, together</li>
+            <li>Conversation prompts for a relaxed money date</li>
+            <li>A couple streak that pauses, and never resets</li>
+          </ul>
+        </div>
+        <div class="shot"><img src="../assets/geldspace/monthly.png" width="295" height="613" alt="The monthly check-in: your progress, your partner's status and your couple streak." loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="assets-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="spaces-h">Two spaces. You decide what goes where.</h2>
-        <p>Everything you add lives in Mine or in Ours. You can move the items you added between them at any time.</p>
+        <h2 id="assets-h">Everything you own. And owe.</h2>
+        <p>Add your first asset in under a minute. Gold and crypto get a suggested value from today's price.</p>
       </div>
-      <div class="spaces2">
-        <div class="space2 mine">
-          <h3>Mine</h3>
-          <ul>
-            <li>Only you can see it.</li>
-            <li>Your partner never sees your Mine: not the names, not the values, not even how many things you have.</li>
-            <li>Your own total includes Ours too, tagged so you can tell them apart.</li>
-          </ul>
-        </div>
-        <div class="space2 ours">
-          <h3>Ours</h3>
-          <ul>
-            <li>Shared wealth you both see and update.</li>
-            <li>You can see who changed what, and when.</li>
-            <li>Nothing appears here unless one of you puts it there.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="note">No partner? GeldSpace works fully on its own. Ours appears once you invite someone.</p>
-    </div>
-  </section>
-
-  <section class="block" id="how" aria-labelledby="how-h">
-    <div class="wrap">
-      <div class="section-head"><h2 id="how-h">How it works</h2></div>
-      <div class="steps3">
-        <ol>
-          <li><div><h3>Add what you own</h3><p>Pick a type, give it a name and a value. Gold and crypto get a suggested value from today's price. Your first asset takes under a minute, and you don't need an account to start.</p></div></li>
-          <li><div><h3>Check in once a month</h3><p>A gentle reminder arrives on the day you choose. Last month's values are already filled in, so unchanged items take one tap. About two minutes, each.</p></div></li>
-          <li><div><h3>See how Ours grew, together</h3><p>When you've both checked in, you get a short recap of Ours and a few conversation prompts for a calm money date. Your couple streak pauses on a missed month, and never resets.</p></div></li>
-        </ol>
-        <img src="../assets/geldspace/monthly.png" width="295" height="613" alt="The monthly check-in: your progress, your partner's status and your couple streak." loading="lazy">
+      <div class="assets">
+        <div class="asset"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-4 4 3 6-7"/></svg>Stocks &amp; funds</div>
+        <div class="asset"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18h16l-3-7H7z"/><path d="M8 11 10 6h4l2 5"/></svg>Gold</div>
+        <div class="asset"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7"/><path d="M6 10v10h12V10"/></svg>Property</div>
+        <div class="asset"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Cash</div>
+        <div class="asset"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5M10 16h5"/></svg>Bonds</div>
+        <div class="asset"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 8h4a2 2 0 0 1 0 4h-4zM9.5 12h4.5a2 2 0 0 1 0 4H9.5zM9.5 7v10M11.5 6v2M11.5 16v2"/></svg>Crypto</div>
+        <div class="asset owe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg>Loans</div>
       </div>
     </div>
   </section>
 
   <section class="block" aria-labelledby="trust-h">
     <div class="wrap">
-      <div class="section-head"><h2 id="trust-h">What to expect</h2></div>
-      <div class="cols2">
-        <div class="panel">
-          <h3>What GeldSpace does</h3>
-          <ul>
-            <li>Shows what you own, what you owe, and the difference.</li>
-            <li>Tracks how it changes month by month.</li>
-            <li>Handles stocks and funds, gold, bonds, cash, property, crypto and loans.</li>
-            <li>Works in your main currency, which you can change.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>What it doesn't do</h3>
-          <ul>
-            <li>It doesn't connect to your accounts. You enter every number yourself.</li>
-            <li>It doesn't give financial advice.</li>
-            <li>It doesn't track spending or set budgets.</li>
-            <li>It has no ads, and we never sell your data.</li>
-          </ul>
-        </div>
+      <div class="section-head"><h2 id="trust-h">Private by design</h2></div>
+      <div class="trust">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 15 15 9"/><path d="M10 6.5 11.5 5a4 4 0 0 1 5.7 5.7L15.5 12.3M8.5 11.7 6.8 13.3a4 4 0 0 0 5.7 5.7l1.5-1.5"/><path d="M4 4l16 16"/></svg><h3>No bank logins</h3><p>It never connects to your accounts. You enter every number yourself.</p></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg><h3>No ads, ever</h3><p>No ads in the app, and we never sell your data.</p></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><h3>Stored in the EU</h3><p>Your account data lives in data centres in the European Union.</p></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg><h3>Yours to take</h3><p>Export everything as a spreadsheet, or delete it all, anytime.</p></div>
       </div>
+      <p class="note">GeldSpace doesn't track spending, set budgets or give financial advice. It does one thing: shows what you have.</p>
     </div>
   </section>
 
@@ -138,18 +167,55 @@
         <details><summary>Where is my data stored?</summary><p>Your account data is stored in data centres in the European Union. You can export everything as a spreadsheet, or delete everything, at any time from Settings. The <a href="privacy/">privacy policy</a> has the details.</p></details>
         <details><summary>What happens if we stop sharing?</summary><p>Each of you keeps your own history. The Ours items you added become yours, and the ones your partner added go back to them. GeldSpace shows you exactly what goes where before you confirm.</p></details>
         <details><summary>How do I sign in?</summary><p>With Apple or Google. You can add your first asset without an account, and sign in when you're ready to keep it safe.</p></details>
-        <details><summary>What does it cost?</summary><p>GeldSpace is free to download, with no in-app purchases.</p></details>
+        <details><summary>What does it cost?</summary><p>GeldSpace is free to download and use.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="cta-h">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2 id="cta-h">See your whole picture today.</h2>
+        <p>Your first asset takes under a minute. No account needed to start.</p>
+        <div class="ctas">
+          <a class="btn btn-light" href="https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9c-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.8-4.1zM14 5.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>Download on the App Store</a>
+        <span class="soon">Google Play · coming soon</span>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="block" id="help" aria-labelledby="help-h">
     <div class="wrap">
-      <div class="section-head"><h2 id="help-h">Help and privacy</h2></div>
-      <div class="help-links">
-        <a href="privacy/">Privacy policy</a>
-        <a href="delete/">Delete your account</a>
-        <a href="mailto:hello@zweikarta.com?subject=GeldSpace%20support">hello@zweikarta.com</a>
+      <div class="section-head wide">
+        <h2 id="help-h">Need a hand?</h2>
+        <p>We're a two-person studio, and we read every message.</p>
+      </div>
+      <div class="help-cards">
+        <a class="help-card mail" href="mailto:hello@zweikarta.com?subject=GeldSpace%20support">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+          <div>
+            <h3>Write to us</h3>
+            <p>Questions, ideas or something not working.</p>
+            <span class="link">hello@zweikarta.com <span class="go" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="help-card" href="privacy/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.4 7 10 4-1.6 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div>
+            <h3>Privacy policy</h3>
+            <p>What we store, where, and why.</p>
+            <span class="link">Read the policy <span class="go" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="help-card" href="delete/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg></span>
+          <div>
+            <h3>Delete your account</h3>
+            <p>Remove your account and all your data.</p>
+            <span class="link">See how <span class="go" aria-hidden="true">→</span></span>
+          </div>
+        </a>
       </div>
       <p class="note">GeldSpace doesn't give financial advice. Screens show example numbers.</p>
     </div>
