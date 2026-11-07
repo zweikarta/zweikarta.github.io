@@ -127,3 +127,38 @@
   .value h3 { font-size: 1.25rem; margin: 4px 0 6px; }
 }
 @media (max-width: 520px) { .asset.owe { grid-column: span 2; } }
+
+/* Lighter, less boxy treatment */
+.values { gap: 40px 32px; }
+.value { background: none; border: 0; border-radius: 0; padding: 0; }
+.value .ico { width: 44px; height: 44px; border-radius: 50%; margin-bottom: 16px; }
+.value .ico svg { width: 22px; height: 22px; }
+.value h3 { font-size: 1.3rem; margin-bottom: 8px; }
+
+.assets { display: flex; flex-wrap: wrap; gap: 10px; }
+.asset { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px 10px 14px; border-radius: 999px; border: 0; background: var(--mine-tint); color: var(--mine-ink); text-align: left; }
+.asset svg { width: 20px; height: 20px; margin: 0; display: inline-block; }
+.asset.owe { background: var(--ours-tint); color: var(--ours-ink); grid-column: auto; }
+
+.faq { gap: 0; border-top: 1px solid var(--line); }
+.faq details { background: none; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 0 4px; }
+
+.help-cards { gap: 32px; }
+.help-card, .help-card.mail { background: none; border: 0; border-radius: 0; padding: 0; color: inherit; flex-direction: row; gap: 16px; align-items: flex-start; }
+.help-card:hover { transform: none; }
+.help-card .ico, .help-card.mail .ico { flex: none; width: 44px; height: 44px; border-radius: 50%; margin: 0; background: var(--mine-tint); color: var(--mine); }
+.help-card .ico svg { width: 22px; height: 22px; }
+.help-card > div { min-width: 0; display: grid; gap: 4px; }
+.help-card h3 { font-size: 1.2rem; }
+.help-card.mail p { color: var(--muted); }
+.help-card .link, .help-card.mail .link { padding-top: 4px; color: var(--mine); }
+.help-card:hover h3 { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .help-card.mail .link { color: #6FC3BD; } }
+:root[data-theme="dark"] .help-card.mail .link { color: #6FC3BD; }
+
+.gsx .ctas { grid-template-columns: repeat(2, 244px); gap: 10px; }
+.show.plain { border: 0; }
+.gsx .ctas > * { height: 46px; font-size: 15px; }
+.gsx .ctas .btn:hover { transform: none; opacity: 0.9; }
+@media (max-width: 600px) { .gsx .ctas { grid-template-columns: minmax(0, 1fr); max-width: 300px; } }
+@media (max-width: 520px) { .values { gap: 28px; } .value { grid-template-columns: 44px minmax(0, 1fr); padding: 0; } }
