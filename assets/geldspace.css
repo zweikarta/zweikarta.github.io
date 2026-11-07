@@ -75,6 +75,8 @@
 .cta-band p { color: #E3F1F0; font-size: 1.15rem; margin: 18px auto 30px; max-width: 30rem; }
 .cta-band .ctas { justify-content: center; }
 
+.section-head.wide { flex-direction: column; align-items: flex-start; gap: 16px; }
+.section-head.wide p { max-width: none; font-size: 1.15rem; }
 .gsx .note { color: var(--muted); font-size: 15px; margin-top: 20px; }
 
 @media (max-width: 960px) {
