@@ -97,6 +97,11 @@
 :root[data-theme="dark"] .help-card.mail .link { color: #fff; }
 @media (max-width: 860px) { .help-cards { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .help-card, .help-card .go { transition: none; } .help-card:hover { transform: none; } }
+/* Store buttons: same size side by side */
+.gsx .ctas { display: grid; grid-template-columns: repeat(2, 264px); gap: 12px; }
+.gsx .cta-band .ctas { justify-content: center; }
+.gsx .ctas > * { width: 100%; height: 52px; justify-content: center; padding: 0 16px; font-size: 16px; white-space: nowrap; }
+@media (max-width: 600px) { .gsx .ctas { grid-template-columns: minmax(0, 1fr); max-width: 320px; } .gsx .cta-band .ctas { margin-inline: auto; } }
 .gsx .note { color: var(--muted); font-size: 15px; margin-top: 20px; }
 
 @media (max-width: 960px) {
