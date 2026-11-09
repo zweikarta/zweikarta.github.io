@@ -82,9 +82,46 @@
     nav.appendChild(a);
   }
 
+  /* Store buttons. Each App Store link carries ?ct=<page> (an App Store campaign token), so
+     App Store Connect can show which page sent the visit. With consent, a click also sends a
+     "store_click" event to GA, so GA shows which page and post led to the store. */
+  var PROVIDER_TOKEN = ""; // App Store Connect › Analytics › Campaigns › "pt" value. Empty = leave links as they are.
+
+  function storeOf(a) {
+    if (/apps\.apple\.com/.test(a.hostname)) return "app_store";
+    if (/play\.google\.com/.test(a.hostname)) return "google_play";
+    return "";
+  }
+
+  function addProviderToken() {
+    if (!PROVIDER_TOKEN) return;
+    document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (a) {
+      try {
+        var u = new URL(a.href);
+        if (!u.searchParams.get("pt")) { u.searchParams.set("pt", PROVIDER_TOKEN); a.href = u.toString(); }
+      } catch (e) {}
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a || !window.gtag) return;
+    var store = storeOf(a);
+    if (!store) return;
+    var ct = "";
+    try { ct = new URL(a.href).searchParams.get("ct") || ""; } catch (err) {}
+    gtag("event", "store_click", {
+      store: store,
+      campaign: ct,
+      link_text: (a.textContent || "").trim().slice(0, 100),
+      transport_type: "beacon"
+    });
+  }, true);
+
   var choice = get();
   if (choice === "yes") loadGA();
   function ready() {
+    addProviderToken();
     settingsLink();
     if (choice !== "yes" && choice !== "no") banner();
   }
