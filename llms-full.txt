@@ -1,0 +1,80 @@
+# Zweikarta & GeldSpace — Complete Knowledge Context
+
+## About Zweikarta
+Zweikarta is an independent two-person app studio located in Berlin, Germany.
+- **Founders**: Mohini (Product & UI/UX Designer) and Shrikant (Mobile App Developer).
+- **Etymology**: The name combines German *zwei* ("two") and Sanskrit *kartā* ("the one who makes") — "two who make things".
+- **Focus**: Crafting calm, intentional software that respects human attention, digital privacy, and long-term utility.
+
+---
+
+## Flagship Product: GeldSpace
+
+### Overview
+GeldSpace is a personal and couples net worth tracking application available for iOS (iPhone) and coming to Android. It provides a high-level view of wealth: everything owned minus everything owed, calculated into a single net worth figure.
+
+### Key Value Propositions
+1. **Designed for Couples (Mine vs. Ours)**:
+   - Couples can connect their accounts while maintaining distinct boundaries.
+   - Assets and liabilities categorized under **"Ours"** are shared with the partner.
+   - Assets and liabilities categorized under **"Mine"** remain strictly private. Neither partner can see the other's private accounts or private total.
+2. **No Bank Logins Required**:
+   - Does not require connecting bank APIs or sharing financial institution credentials.
+   - Users manually enter or confirm account totals once a month, eliminating sync errors, security liabilities, and broken financial aggregators.
+3. **Calm, High-Level Net Worth vs. Stressful Expense Tracking**:
+   - Avoids micromanaging every transaction, coffee, or grocery bill.
+   - Focuses on the bigger picture: is total wealth growing month over month?
+4. **Two-Minute Monthly Ritual ("Money Date")**:
+   - Sends a monthly reminder.
+   - Previous month's numbers are pre-filled; users tap to confirm unchanged values or update balances in two minutes.
+   - When both partners complete the check-in, shared wealth updates automatically.
+5. **Supported Asset Categories**:
+   - Stocks & Funds
+   - Gold & Precious Metals (with real-time price lookup)
+   - Real Estate & Property
+   - Cash & Bank Accounts
+   - Crypto (with real-time price lookup)
+   - Bonds
+   - Liabilities & Loans (mortgages, personal loans, car loans)
+6. **Privacy & Security**:
+   - Zero advertisements, no selling of user data.
+   - Account data stored in European Union data centers (GDPR compliant).
+   - Data exportable as a spreadsheet or deletable at any time.
+
+---
+
+## Frequently Asked Questions (GeldSpace)
+
+### Can my partner see my personal financial total?
+No. Your partner sees shared items in "Ours" only, plus whether you have completed your monthly check-in. Your "Mine" space and private balances are never shown or aggregated into their view.
+
+### Do I need a partner to use GeldSpace?
+No. GeldSpace functions fully as a solo wealth tracker. The shared "Ours" space only appears if you invite a partner.
+
+### How does uncoupling or stopping sharing work?
+Each user retains their own historical records. Items originally placed in "Ours" are returned cleanly to the partner who contributed them, with full preview before confirmation.
+
+### How much does GeldSpace cost?
+GeldSpace is free to download on the Apple App Store.
+
+---
+
+## Core Financial Frameworks & Guides
+
+### The Three Financial Setups for Couples
+1. **Everything Together (100% Combined)**:
+   - All income into joint accounts.
+   - Simple and transparent, but can limit individual financial autonomy.
+2. **Everything Separate (100% Split)**:
+   - Separate accounts, splitting shared expenses.
+   - Protects autonomy, but makes high-level shared planning harder.
+3. **Yours, Mine, and Ours (The Hybrid 3-Account Model)**:
+   - Each partner retains individual private accounts ("Mine") for personal spending and investments.
+   - A shared pool ("Ours") covers joint expenses, joint emergency funds, and long-term wealth goals.
+   - Promotes autonomy alongside shared accountability.
+
+### The 3-Question Monthly Money Date Routine
+A calm agenda for monthly couples finance conversations:
+1. *What felt good about money this month?* (Focuses on positives, avoids feeling like an audit).
+2. *Is there anything to move into "ours", or back to "mine"?* (Provides a natural home for boundary adjustments).
+3. *What are we looking forward to?* (Reframes finance around shared goals and life plans).

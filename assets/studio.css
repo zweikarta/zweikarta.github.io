@@ -303,3 +303,82 @@ footer.foot a { color: var(--on-night-muted); }
   .post-app img { max-width: 220px; margin: 0 auto -110px; }
 }
 .post-cover picture, .post-body picture, .post-card picture, .post-app picture { display: block; }
+
+/* SEO & GEO Enhancements: Takeaways, Tables, FAQs, and Related Posts */
+.post-meta a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.post-meta a:hover { color: var(--fg); }
+
+.post-takeaways {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--mine);
+  border-radius: var(--r-md);
+  padding: 24px 28px;
+  margin: 0 0 40px;
+}
+.post-takeaways .kicker { color: var(--mine); margin-bottom: 12px; }
+.post-takeaways ul { margin: 0; padding-left: 1.25em; }
+.post-takeaways li { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.6; }
+.post-takeaways li:last-child { margin-bottom: 0; }
+
+.post-table-wrap {
+  overflow-x: auto;
+  margin: 36px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface);
+}
+.post-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15.5px;
+  line-height: 1.5;
+  text-align: left;
+}
+.post-table th, .post-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.post-table th {
+  font-family: var(--display);
+  font-weight: 700;
+  background: var(--bg);
+  color: var(--fg);
+}
+.post-table tr:last-child td {
+  border-bottom: none;
+}
+
+.post-faq {
+  margin-top: 56px;
+  border-top: 1px solid var(--line);
+  padding-top: 40px;
+}
+.post-faq h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); margin-bottom: 20px; }
+.post-faq .faq-list { display: flex; flex-direction: column; gap: 12px; }
+.post-faq details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 18px 22px;
+  transition: border-color .15s ease;
+}
+.post-faq details[open] { border-color: var(--fg); }
+.post-faq summary {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  cursor: pointer;
+  list-style: none;
+}
+.post-faq summary::-webkit-details-marker { display: none; }
+.post-faq details p { margin: 14px 0 0; color: var(--muted); line-height: 1.6; }
+
+.post-related {
+  clear: both;
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
+}
+.post-related h2 { font-size: clamp(1.7rem, 3.4vw, 2.2rem); margin-bottom: 24px; }
+

@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://zweikarta.com/sitemap.xml
+# LLM & AI agent discovery
+# Reference: https://zweikarta.com/llms.txt
