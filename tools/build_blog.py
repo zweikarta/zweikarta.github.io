@@ -57,14 +57,14 @@ APPS = {
 
 AUTHORS = {
     "shrikant": {
-        "name": "Shrikant",
-        "role": "Mobile developer",
+        "name": "Shrikant Chaudhari",
+        "role": "Co-founder & Mobile Developer",
         "url": f"{SITE}/#us",
         "id": f"{SITE}/#shrikant",
     },
     "mohini": {
-        "name": "Mohini",
-        "role": "Designer",
+        "name": "Mohini Babhulkar",
+        "role": "Co-founder & Designer",
         "url": f"{SITE}/#us",
         "id": f"{SITE}/#mohini",
     },
@@ -431,7 +431,7 @@ def build_post(p, all_posts):
                     "name": q,
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": re.sub(r"<[^>]+>", "", a).strip()
+                        "text": html.unescape(re.sub(r"<[^>]+>", "", a)).strip()
                     }
                 }
                 for q, a in faq_items
@@ -482,10 +482,9 @@ def build_post(p, all_posts):
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a></nav>
   <h1>{inline(p['title'])}</h1>
   <p class="post-meta"><time datetime="{p['date']}">{nice_date(p['date'])}</time> · {minutes} min read · {byline_html}</p>
-  <figure class="post-cover">{picture(slug, p['image'], 1200, 630, p['image_alt'], "(max-width: 46rem) 100vw, 736px", ' fetchpriority="high"')}</figure>
+  <figure class="post-cover">{picture(slug, p['image'], 1200, 630, p['image_alt'], "(max-width: 46rem) 100vw, 736px", ' fetchpriority="high"')}</figure>{takeaway_block}
   <nav class="post-toc" aria-label="In this post"><p class="kicker">In this post</p><ol>{toc_html}</ol></nav>
   <div class="post-body">
-{takeaway_block}
 {body}
   </div>{cta}{faq_block}
   <p class="post-disclaimer">We don't give financial advice. This post shares ideas and conversation starters, not recommendations for your situation.</p>{related_html}

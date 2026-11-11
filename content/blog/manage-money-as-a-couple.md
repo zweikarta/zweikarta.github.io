@@ -11,10 +11,10 @@ image_alt: Two overlapping circles labelled Mine, Ours and Mine: a picture of sh
 ---
 
 ::: takeaway
-- **The 3-Account Model (Yours, Mine, Ours)** gives couples the best balance of personal financial freedom and shared wealth goals.
-- **Tracking net worth beats budgeting every coffee**: looking at total wealth (what you own minus what you owe) is calmer and more predictive.
-- **Privacy is healthy, secrecy is not**: keeping personal savings private by mutual agreement builds trust without surveillance.
-- **A 15-minute monthly check-in** on a fixed day removes the tension of wondering who will bring up money.
+- Most couples keep at least some money separate: 62% in a recent survey use separate accounts or a mix.
+- Tracking your shared net worth once a month is calmer than tracking every single expense.
+- A hybrid setup like Yours, Mine and Ours balances personal independence with shared goals.
+- Agreeing on a fixed day to check in means nobody has to feel awkward bringing up money.
 :::
 
 Money is one of the things couples talk about least and worry about most. It's rarely because of the money itself. It's because nobody has a clear picture, and the conversation only comes up when something has already gone wrong.
@@ -37,11 +37,11 @@ You're not unusual if you sit somewhere in between. In a [Bankrate survey from D
 
 ![Three setups: everything together, everything separate, and yours, mine and ours.](setups.png "Three common setups. None of them is the right one for everyone.")
 
-| Setup | How it works | Best for | Autonomy |
+| Setup | How it works | Upside | Watch out for |
 | :--- | :--- | :--- | :--- |
-| **Everything Together** | 100% combined into joint accounts | Shared goals, single-earner households | Low |
-| **Everything Separate** | 100% split via personal accounts | Early relationships, short-term rentals | High |
-| **Yours, Mine & Ours** | Personal accounts + shared joint pool | Most modern couples & long-term partners | High + Shared |
+| **Everything together** | All income goes into joint accounts | Simple, full transparency | Can feel restrictive if one of you likes autonomy |
+| **Everything separate** | Individual accounts, split shared costs | Total financial independence | Harder to see the whole picture and plan ahead |
+| **Yours, mine and ours** | Separate accounts plus a joint pool | Balances autonomy and shared goals | Needs clear agreement on what belongs in "ours" |
 
 ### 1. Everything together
 
@@ -69,7 +69,7 @@ There's no right answer here. What matters is that you both chose it, and that y
 
 ::: faq
 ### Do couples have to combine bank accounts when moving in together?
-No. Over 62% of modern couples keep at least some accounts separate. Using a hybrid system like "Yours, Mine, and Ours" allows you to pay shared rent and bills from one joint pot while keeping personal investments and savings private.
+No. In a Bankrate survey from December 2025, 62% of couples kept at least some money separate. A hybrid system like Yours, Mine and Ours lets you pay shared bills from one joint pot while keeping your personal savings private.
 
 ### What is the fairest way to split shared costs as a couple?
 The two most common methods are 50/50 (best when partners earn similar incomes) or proportional to income (for example, if one partner earns 60% of household income, they contribute 60% of shared expenses). What matters most is agreeing upfront on what counts as a shared expense.

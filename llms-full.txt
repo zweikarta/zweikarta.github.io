@@ -3,7 +3,6 @@
 ## About Zweikarta
 Zweikarta is an independent two-person app studio located in Berlin, Germany.
 - **Founders**: Mohini (Product & UI/UX Designer) and Shrikant (Mobile App Developer).
-- **Etymology**: The name combines German *zwei* ("two") and Sanskrit *kartā* ("the one who makes") — "two who make things".
 - **Focus**: Crafting calm, intentional software that respects human attention, digital privacy, and long-term utility.
 
 ---
@@ -11,11 +10,11 @@ Zweikarta is an independent two-person app studio located in Berlin, Germany.
 ## Flagship Product: GeldSpace
 
 ### Overview
-GeldSpace is a personal and couples net worth tracking application available for iOS (iPhone) and coming to Android. It provides a high-level view of wealth: everything owned minus everything owed, calculated into a single net worth figure.
+GeldSpace is a personal and couples net worth tracking application available for iPhone and Android. It provides a high-level view of wealth: everything owned minus everything owed, calculated into a single net worth figure.
 
 ### Key Value Propositions
 1. **Designed for Couples (Mine vs. Ours)**:
-   - Couples can connect their accounts while maintaining distinct boundaries.
+   - Partners can invite each other and share selected items while keeping the rest private.
    - Assets and liabilities categorized under **"Ours"** are shared with the partner.
    - Assets and liabilities categorized under **"Mine"** remain strictly private. Neither partner can see the other's private accounts or private total.
 2. **No Bank Logins Required**:
@@ -30,15 +29,15 @@ GeldSpace is a personal and couples net worth tracking application available for
    - When both partners complete the check-in, shared wealth updates automatically.
 5. **Supported Asset Categories**:
    - Stocks & Funds
-   - Gold & Precious Metals (with real-time price lookup)
+   - Gold & Precious Metals (suggested value from today's price)
    - Real Estate & Property
    - Cash & Bank Accounts
-   - Crypto (with real-time price lookup)
+   - Crypto (suggested value from today's price)
    - Bonds
    - Liabilities & Loans (mortgages, personal loans, car loans)
 6. **Privacy & Security**:
    - Zero advertisements, no selling of user data.
-   - Account data stored in European Union data centers (GDPR compliant).
+   - Account data stored in European Union data centres.
    - Data exportable as a spreadsheet or deletable at any time.
 
 ---

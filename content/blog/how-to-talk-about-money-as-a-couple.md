@@ -11,10 +11,9 @@ image_alt: Twelve small dots in a grid, one for each month, with the last one hi
 ---
 
 ::: takeaway
-- **Money talks fail when they only happen during emergencies**: recurring, predictable conversations prevent finances from feeling like a crisis.
-- **The 3-Question Money Date**: (1) What felt good? (2) Anything to move between Mine and Ours? (3) What are we looking forward to?
-- **Keep a strict finish line**: Limit monthly check-ins to 10–15 minutes so the talk never drifts into endless financial dread.
-- **Separate privacy from secrecy**: You don't have to show every private coffee purchase to build a healthy shared wealth plan.
+- Money talks work best on a fixed day, so neither of you has to be the one who brings it up.
+- Three questions are enough: what felt good, what to move between Mine and Ours, and what you're looking forward to.
+- A quiet monthly check-in can take just a couple of minutes, with no need to show every private number.
 :::
 
 Most couples know they should talk about money. Few ever find a good moment for it. It's late, the week was long, and nobody wants to start something heavy. So the talk waits until a surprise bill or a big decision forces it, and then it happens at the worst possible time.
@@ -38,12 +37,6 @@ None of this is really about the money. It's about the shape of the conversation
 ## Three ways couples handle money talks
 
 ![Three patterns over a year: a few talks at random times, one big sit-down, and a short talk every month.](ways.png "Three common patterns over a year.")
-
-| Cadence | Description | Pros | Watch Out For |
-| :--- | :--- | :--- | :--- |
-| **Only When Needed** | Reacting to unexpected bills or changes | Zero advance planning | Turns money into a stress trigger |
-| **Annual Sit-Down** | Exhaustive deep-dive once or twice a year | Very thorough | Hard to schedule, numbers go stale fast |
-| **Monthly Money Date** | 10–15 minute calm check-in once a month | Small issues caught early, stays low stress | Needs a fixed recurring day |
 
 ### 1. Only when something comes up
 
