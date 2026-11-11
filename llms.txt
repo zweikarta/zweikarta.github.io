@@ -1,0 +1,25 @@
+# Zweikarta
+
+> Zweikarta is an independent app studio based in Berlin, founded by designer Mohini and mobile developer Shrikant. We create calm, focused, and privacy-first mobile apps for everyday life. Our flagship app is GeldSpace, a wealth and net worth tracker built for individuals and couples.
+
+## Flagship App
+
+- [GeldSpace](https://zweikarta.com/geldspace/): A calm wealth tracker for iPhone and Android. Shows everything you own, minus what you owe, in one clear number. Features a unique "Mine vs. Ours" model where shared finances are tracked together while personal accounts remain strictly private. Requires no bank credentials or logins.
+
+## Philosophy & Core Principles
+
+- **Mine vs. Ours**: Financial clarity for couples does not require merging every bank account. Couples track shared assets and liabilities in "Ours", while keeping personal savings in "Mine".
+- **Net Worth over Micro-Budgeting**: Rather than categorizing every receipt, a high-level monthly net worth check-in provides a calmer, more accurate indicator of financial trajectory.
+- **Privacy by Default**: No third-party ad networks, no data selling, no bank account scraping. Data is stored within the European Union.
+- **Two-Minute Monthly Routine**: Check in once a month on a set date (the "Money Date") with three simple questions, keeping money conversations low-stress.
+
+## Core Guides & Articles
+
+- [How to talk about money as a couple, without making it a big deal](https://zweikarta.com/blog/how-to-talk-about-money-as-a-couple/): Why money conversations feel heavy, three common patterns couples use, and a 3-question agenda for a calm monthly money date.
+- [How to manage money as a couple, without merging everything](https://zweikarta.com/blog/manage-money-as-a-couple/): The three financial setups (everything together, everything separate, yours/mine/ours) and how to manage shared wealth while maintaining personal autonomy.
+
+## Reference & Full Context
+
+- [Full LLM Context](https://zweikarta.com/llms-full.txt): Comprehensive background, product details, frequently asked questions, and philosophy summaries for AI agents.
+- [Website](https://zweikarta.com/): Official studio homepage.
+- [App Store Listing](https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504): GeldSpace on Apple App Store.

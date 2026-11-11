@@ -3,10 +3,19 @@ title: How to manage money as a couple, without merging everything
 seo_title: How to manage money as a couple without merging everything
 description: Most couples keep some money separate. Why money gets hard as a couple, three ways to set it up, and the small monthly habits that keep you on the same page.
 date: 2026-10-25
+updated: 2026-11-10
+author: Shrikant
 app: geldspace
 image: cover.jpg
 image_alt: Two overlapping circles labelled Mine, Ours and Mine: a picture of shared and private money in a couple.
 ---
+
+::: takeaway
+- Most couples keep at least some money separate: 62% in a recent survey use separate accounts or a mix.
+- Tracking your shared net worth once a month is calmer than tracking every single expense.
+- A hybrid setup like Yours, Mine and Ours balances personal independence with shared goals.
+- Agreeing on a fixed day to check in means nobody has to feel awkward bringing up money.
+:::
 
 Money is one of the things couples talk about least and worry about most. It's rarely because of the money itself. It's because nobody has a clear picture, and the conversation only comes up when something has already gone wrong.
 
@@ -28,6 +37,12 @@ You're not unusual if you sit somewhere in between. In a [Bankrate survey from D
 
 ![Three setups: everything together, everything separate, and yours, mine and ours.](setups.png "Three common setups. None of them is the right one for everyone.")
 
+| Setup | How it works | Upside | Watch out for |
+| :--- | :--- | :--- | :--- |
+| **Everything together** | All income goes into joint accounts | Simple, full transparency | Can feel restrictive if one of you likes autonomy |
+| **Everything separate** | Individual accounts, split shared costs | Total financial independence | Harder to see the whole picture and plan ahead |
+| **Yours, mine and ours** | Separate accounts plus a joint pool | Balances autonomy and shared goals | Needs clear agreement on what belongs in "ours" |
+
 ### 1. Everything together
 
 All income goes into joint accounts and everything you own is shared. It's simple and very transparent. It works best when you have similar views on spending and saving, and it can feel tight if one of you likes some independence.
@@ -48,9 +63,20 @@ There's no right answer here. What matters is that you both chose it, and that y
 
 **Look at what you own, not only what you spend.** Tracking every coffee is tiring and leads to arguments. Looking at the bigger picture is calmer: everything you own together, minus what you owe. That's your shared net worth, and it tells you far more about where you're heading.
 
-**Check in once a month.** Pick a fixed day, like the first of the month, and keep it short, around fifteen minutes. Three questions are enough: what went well, what changed, and is anything big coming up? Some couples call this a money date. A fixed day means nobody has to be the one who says "we need to talk about money".
+**Check in once a month.** Pick a fixed day, like the first of the month, and keep it short, around fifteen minutes. You can follow our [step-by-step guide on how to talk about money as a couple](/blog/how-to-talk-about-money-as-a-couple/) for a calm 3-question agenda. A fixed day means nobody has to be the one who says "we need to talk about money".
 
 **Keep privacy, not secrets.** Having money of your own is healthy. Hiding a debt is not. The difference is that privacy is something you both agreed on.
+
+::: faq
+### Do couples have to combine bank accounts when moving in together?
+No. In a Bankrate survey from December 2025, 62% of couples kept at least some money separate. A hybrid system like Yours, Mine and Ours lets you pay shared bills from one joint pot while keeping your personal savings private.
+
+### What is the fairest way to split shared costs as a couple?
+The two most common methods are 50/50 (best when partners earn similar incomes) or proportional to income (for example, if one partner earns 60% of household income, they contribute 60% of shared expenses). What matters most is agreeing upfront on what counts as a shared expense.
+
+### How often should couples review their net worth?
+Once a month is ideal. Checking daily or weekly leads to stress over temporary market fluctuations, while once a year allows debt or imbalances to grow unnoticed. A two-minute monthly check-in keeps numbers fresh without feeling like an audit.
+:::
 
 ::: app ours.png
 ## Where GeldSpace fits in
