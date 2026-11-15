@@ -54,7 +54,7 @@ No. GeldSpace functions fully as a solo wealth tracker. The shared "Ours" space 
 Each user retains their own historical records. Items originally placed in "Ours" are returned cleanly to the partner who contributed them, with full preview before confirmation.
 
 ### How much does GeldSpace cost?
-GeldSpace is free to download on the Apple App Store.
+GeldSpace is free to download on the Apple App Store (https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504) and on Google Play (https://play.google.com/store/apps/details?id=com.zweikarta.geldspace.app).
 
 ---
 
