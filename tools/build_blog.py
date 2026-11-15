@@ -51,7 +51,8 @@ APPS = {
         "pitch": "Your wealth in one calm place, alone or as a couple. Mine stays private, Ours is shared, and a two-minute monthly check-in keeps it fresh.",
         "cta": "See how GeldSpace works",
         "store": "https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504",
-        "status": "Now on the App Store for iPhone. Android coming soon.",
+        "play": "https://play.google.com/store/apps/details?id=com.zweikarta.geldspace.app",
+        "status": "Now on the App Store for iPhone and on Google Play for Android.",
     }
 }
 
@@ -91,11 +92,18 @@ def store_link(url, ct):
     return f"{url}?ct={ct[:40]}"
 
 
+def play_link(url, ct):
+    # Adds UTM tags in Play's install referrer, so the Play Console shows which page sent the install.
+    return f"{url}&referrer=utm_source%3Dzweikarta.com%26utm_medium%3Dwebsite%26utm_campaign%3D{ct[:40]}"
+
+
 def status_html(app, ct):
-    # Links the words "App Store" in the status line to the live listing.
+    # Links the words "App Store" and "Google Play" in the status line to the live listings.
     text = esc(app['status'])
     if app.get('store'):
         text = text.replace('App Store', f'<a href="{esc(store_link(app["store"], ct))}">App Store</a>', 1)
+    if app.get('play'):
+        text = text.replace('Google Play', f'<a href="{esc(play_link(app["play"], ct))}">Google Play</a>', 1)
     return text
 
 

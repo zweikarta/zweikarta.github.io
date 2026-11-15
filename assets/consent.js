@@ -83,7 +83,8 @@
   }
 
   /* Store buttons. Each App Store link carries ?ct=<page> (an App Store campaign token), so
-     App Store Connect can show which page sent the visit. With consent, a click also sends a
+     App Store Connect can show which page sent the visit. Google Play links carry the page as
+     utm_campaign in the install referrer, so the Play Console shows it too. With consent, a click also sends a
      "store_click" event to GA, so GA shows which page and post led to the store. */
   var PROVIDER_TOKEN = ""; // App Store Connect › Analytics › Campaigns › "pt" value. Empty = leave links as they are.
 
@@ -109,7 +110,11 @@
     var store = storeOf(a);
     if (!store) return;
     var ct = "";
-    try { ct = new URL(a.href).searchParams.get("ct") || ""; } catch (err) {}
+    try {
+      var u = new URL(a.href);
+      // App Store links carry ?ct=<page>; Google Play links carry utm_campaign=<page> inside referrer.
+      ct = u.searchParams.get("ct") || new URLSearchParams(u.searchParams.get("referrer") || "").get("utm_campaign") || "";
+    } catch (err) {}
     gtag("event", "store_click", {
       store: store,
       campaign: ct,
