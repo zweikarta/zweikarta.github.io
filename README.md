@@ -53,4 +53,4 @@ Note: on the free plan the TXT record is public, so the Gmail address can be loo
 `assets/geldspace/*.png` are rendered from the design canvas (MktScreens artboard: OvLoanA → home-mine, OvOurs → home-ours, MonthlyHub → monthly). Re-export them when the designs change.
 
 ## Fonts
-Bricolage Grotesque (SIL Open Font License, `assets/fonts/OFL.txt`) is self-hosted in `assets/fonts/`, so the site makes no requests to Google Fonts. Inter 500–800 (SIL Open Font License, `assets/fonts/OFL-Inter.txt`, from `@fontsource/inter` 5.1.0) is self-hosted the same way for the GeldSpace net worth page. `assets/geldspace/icon.svg` is the GeldSpace app icon (BRD-01) as SVG. Home and GeldSpace pages use `assets/studio.css`; legal pages use `assets/site.css`.
+Bricolage Grotesque (SIL Open Font License, `assets/fonts/OFL.txt`) is self-hosted in `assets/fonts/`, so the site makes no requests to Google Fonts. The GeldSpace net worth page uses the same Bricolage files from an inline `@font-face`. `assets/geldspace/icon.svg` is the GeldSpace app icon (BRD-01) as SVG. Home and GeldSpace pages use `assets/studio.css`; legal pages use `assets/site.css`.

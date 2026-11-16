@@ -9,21 +9,21 @@
 <meta property="og:description" content="Add what you share, roughly. See where you stand together. Free, nothing is saved or sent.">
 <meta property="og:url" content="https://zweikarta.com/geldspace/net-worth/">
 <meta property="og:image" content="https://zweikarta.com/assets/og/geldspace.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GeldSpace: bring your wealth into one clear space.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../assets/geldspace/icon.svg" type="image/svg+xml">
-<link rel="preload" href="../../assets/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-/* Inter, self-hosted (SIL OFL, assets/fonts/OFL-Inter.txt) */
-@font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:500;src:url(../../assets/fonts/inter-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:500;src:url(../../assets/fonts/inter-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:600;src:url(../../assets/fonts/inter-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:600;src:url(../../assets/fonts/inter-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:700;src:url(../../assets/fonts/inter-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:700;src:url(../../assets/fonts/inter-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:800;src:url(../../assets/fonts/inter-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-display:swap;font-weight:800;src:url(../../assets/fonts/inter-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-:root{--canvas:#F2F2F7;--ours:#B84A35;--ours-ink:#5C2318;--ours-tint:#FBEAE5;--mine:#1F7A76;--mine-ink:#134B48;--mine-tint:#E3F1F0;--dip:#9A5614;--dip-tint:#F6ECDF;--text:#1C1C1E;--muted:#6E6E73;--line:#E5E5EA}
+/* Same type as the rest of the site: Bricolage 800 for display (files shared with studio.css), system stack for text */
+@font-face{font-family:"Bricolage";font-weight:800;font-display:swap;src:url(../../assets/fonts/bricolage-grotesque-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"Bricolage";font-weight:800;font-display:swap;src:url(../../assets/fonts/bricolage-grotesque-latin-ext-800-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+1E00-1E9F,U+20A0-20AB,U+2C60-2C7F,U+A720-A7FF}
+/* GeldSpace colours (geldspace.css) on the Sanctuary palette (.gs in site.css). --dip: amber for what you owe, so debt is never red. */
+:root{--canvas:#F2F2F7;--ours:#B84A35;--ours-ink:#5C2318;--ours-tint:#FBEAE5;--mine:#1F7A76;--mine-ink:#134B48;--mine-tint:#E3F1F0;--dip:#9A5614;--text:#1C1C1E;--muted:#636366;--line:#D8D8DE;--faint:#C7C7CC;
+ --display:"Bricolage",-apple-system,"Segoe UI",Roboto,sans-serif;--body:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}
-html,body{margin:0;height:100%;overflow:hidden;background:var(--canvas);color:var(--text);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--canvas);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased}
 button{font:inherit;cursor:pointer}
 .sky,.sky2{position:fixed;inset:0;background:linear-gradient(180deg,#E4E4EA 0%,#F2F2F7 60%)}
 .sky2{background:linear-gradient(180deg,#F8D9CF 0%,var(--ours-tint) 45%,#FFF7F3 70%);opacity:0;transition:opacity 2.4s ease}
@@ -36,25 +36,25 @@ button{font:inherit;cursor:pointer}
 .hills{position:absolute;left:0;right:0;bottom:0;width:100%;height:42vh}
 #fog{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
 .top{position:fixed;inset:0 0 auto;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;z-index:4}
-.wm{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--mine-ink);font-size:18px}.mk{width:26px;height:26px;border-radius:7px;background:var(--mine);overflow:hidden}.mk svg{display:block;width:100%;height:100%}
+.wm{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:800;letter-spacing:-.02em;color:var(--mine-ink);font-size:19px;text-decoration:none}.wm img{display:block;width:26px;height:26px}
 .cur{border:0;background:rgba(255,255,255,.8);border-radius:20px;padding:6px 14px;font-weight:700;color:var(--mine-ink)}
 .title{position:fixed;left:0;right:0;top:13vh;text-align:center;padding:0 20px;z-index:3;transition:opacity .8s,transform .8s}
-.title h1{margin:0;font-weight:800;font-size:clamp(34px,6vw,64px);letter-spacing:-1.8px;line-height:1.02;color:var(--mine-ink)}
-.title p{margin:12px 0 0;color:#48484A;font-size:17px}
+.title h1{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(34px,6vw,64px);letter-spacing:-1.8px;line-height:1.02;color:var(--mine-ink)}
+.title p{margin:12px 0 0;color:var(--muted);font-size:17px}
 /* dock */
 .dock{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(560px,calc(100% - 24px));z-index:3;
  background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:28px;padding:18px;box-shadow:0 20px 50px rgba(19,75,72,.14);transition:transform .9s cubic-bezier(.6,0,.2,1),opacity .6s}
 .active{display:flex;align-items:flex-end;gap:12px}
 .active .f{flex:1;min-width:0}
-.active label{display:block;font-size:13px;font-weight:800;letter-spacing:1.2px;color:var(--ours)}
+.active label{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--ours)}
 .active label.owe{color:var(--dip)}
 .active .in{display:flex;align-items:baseline;gap:4px;border-bottom:2.5px solid var(--line);transition:border-color .2s}
 .active .in:focus-within{border-color:var(--ours)}
-.active .in span{font-weight:800;font-size:34px;color:#C7C7CC}
-.active input{flex:1;min-width:0;border:0;background:none;outline:none;padding:4px 0;font:800 36px Inter,sans-serif;letter-spacing:-1px;color:var(--text);font-variant-numeric:tabular-nums}
+.active .in span{font-family:var(--display);font-weight:800;font-size:34px;color:var(--faint)}
+.active input{flex:1;min-width:0;border:0;background:none;outline:none;padding:4px 0;font:800 36px var(--display);letter-spacing:-1px;color:var(--text);font-variant-numeric:tabular-nums}
 .ok{flex:none;width:54px;height:54px;border-radius:50%;border:0;background:var(--mine-ink);color:#fff;font-size:22px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.chip{border:0;border-radius:14px;padding:8px 12px;background:#fff;font-weight:600;font-size:14px;color:#3A3A3C;display:flex;gap:6px;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,.05);transition:all .2s}
+.chip{border:0;border-radius:14px;padding:8px 12px;background:#fff;font-weight:600;font-size:14px;color:var(--text);display:flex;gap:6px;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,.05);transition:all .2s}
 .chip small{font-weight:700;color:var(--ours);font-variant-numeric:tabular-nums}
 .chip.owe small{color:var(--dip)}
 .chip.on{box-shadow:0 0 0 2px var(--ours)}.chip.owe.on{box-shadow:0 0 0 2px var(--dip)}
@@ -64,8 +64,8 @@ button{font:inherit;cursor:pointer}
 /* result */
 .res{position:fixed;left:0;right:0;top:11vh;text-align:center;z-index:3;padding:0 20px;pointer-events:none;opacity:0;transition:opacity .6s}
 .res.show{opacity:1;pointer-events:auto}
-.pill{display:inline-block;padding:7px 16px;border-radius:20px;background:rgba(255,255,255,.75);color:var(--ours-ink);font-weight:700;font-size:12.5px;letter-spacing:1.4px}
-.num{font-weight:800;font-size:clamp(52px,11vw,116px);letter-spacing:-3px;line-height:1;margin:16px 0 0;color:var(--ours-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;text-transform:uppercase;padding:7px 16px;border-radius:20px;background:rgba(255,255,255,.75);color:var(--ours-ink);font-weight:700;font-size:12.5px;letter-spacing:1.4px}
+.num{font-family:var(--display);font-weight:800;font-size:clamp(52px,11vw,116px);letter-spacing:-3px;line-height:1;margin:16px 0 0;color:var(--ours-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
 .num.neg{color:var(--dip)}
 .num i{font-style:normal;display:inline-block;animation:ch .7s cubic-bezier(.2,.8,.2,1) both}
 @keyframes ch{from{opacity:0;filter:blur(12px);transform:translateY(-.3em)}to{opacity:1;filter:none;transform:none}}
@@ -84,11 +84,11 @@ button{font:inherit;cursor:pointer}
  transform:translate(-50%,140%);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
 .app.show{transform:translate(-50%,0)}
 .app .h{display:flex;gap:14px;align-items:center;margin-bottom:14px}
-.icon{flex:none;width:52px;height:52px;border-radius:12px;background:var(--mine);overflow:hidden}.icon svg{display:block;width:100%;height:100%}
-.app b{display:block;font-size:17px}.app small{font-size:14.5px;color:var(--muted);line-height:1.35}
+.icon{flex:none;display:block;width:52px;height:52px}
+.app b{display:block;font-family:var(--display);font-weight:800;letter-spacing:-.02em;font-size:19px}.app small{font-size:14.5px;color:var(--muted);line-height:1.35}
 .stores{display:flex;gap:10px;flex-wrap:wrap}
-.store{flex:1;min-width:130px;display:flex;align-items:center;justify-content:center;gap:8px;background:#000;color:#fff;text-decoration:none;border-radius:12px;padding:11px 14px;font-weight:600;font-size:14.5px}
-.store svg{width:18px;height:18px;fill:#fff}
+.store{flex:1;min-width:230px;white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:8px;background:#000;color:#fff;text-decoration:none;border-radius:12px;padding:11px 14px;font-weight:600;font-size:14.5px}
+.store svg{width:18px;height:18px;flex:none}
 .again{display:block;margin:10px auto 0;border:0;background:none;color:var(--muted);font-weight:600;font-size:14.5px}
 .note{margin:10px 0 0;text-align:center;font-size:12.5px;color:var(--muted)}
 .demo{background:var(--mine-ink);color:#fff;font-weight:800;font-size:11.5px;letter-spacing:1.4px;padding:5px 12px;border-radius:20px}
@@ -104,6 +104,10 @@ body.lifted .rays{opacity:1}
 @media (max-height:720px){.title{top:9vh}.res{top:8vh}.path{margin-top:18px}.tag{font-size:15px}}
 @media (max-height:640px){.res{top:6vh}.num{font-size:clamp(44px,10vw,80px)}.path{margin-top:12px}}
 @media (max-width:520px){.dock{padding:14px}.active input{font-size:30px}.active .in span{font-size:28px}.chip{font-size:13px;padding:7px 10px}.title p{font-size:15.5px}}
+/* Short screens (landscape phones, big text): result and card flow and scroll instead of overlapping */
+@media (max-height:560px){body.lifted{overflow:visible;height:auto}body.lifted .top{position:absolute}html:has(body.lifted){overflow:auto}
+ body.lifted .res,body.lifted .app{position:relative;top:auto;left:auto;bottom:auto;margin:84px auto 0;transform:none}
+ body.lifted .app{display:none;margin:24px auto 24px}body.lifted .app.show{display:block}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}}
 </style></head><body>
 <div class="sky"></div><div class="sky2"></div>
@@ -116,28 +120,29 @@ body.lifted .rays{opacity:1}
   </svg>
 </div>
 <canvas id="fog" aria-hidden="true"></canvas>
-<header class="top"><span class="wm"><i class="mk"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M81.2 38.8A30 30 0 1 0 90 60H66" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="60" r="7" fill="#F2B4A3"/></svg></i>GeldSpace</span><button class="cur" id="cur" aria-label="Change currency">€</button></header>
+<header class="top"><a class="wm" href="../"><img src="../../assets/geldspace/icon.svg" alt="" width="26" height="26">GeldSpace</a><button class="cur" id="cur" aria-label="Change currency">€</button></header>
 
 <div class="title"><h1>Can't see where<br>you stand?</h1><p>Add what you share. Rough is fine.<br>Watch the fog lift.</p></div>
 
 <section class="dock" id="dock">
-  <div class="active"><div class="f"><label id="lbl" for="amt">SHARED ACCOUNTS AND CASH</label><div class="in"><span class="s">€</span><input id="amt" inputmode="numeric" autocomplete="off" placeholder="0"></div></div><button class="ok" id="ok" aria-label="Next">→</button></div>
+  <div class="active"><div class="f"><label id="lbl" for="amt">Shared accounts and cash</label><div class="in"><span class="s">€</span><input id="amt" inputmode="numeric" autocomplete="off" placeholder="0"></div></div><button class="ok" id="ok" aria-label="Next">→</button></div>
   <div class="chips" id="chips"></div>
   <button class="lift" id="lift" disabled>Lift the fog</button>
   <p class="note">Only shared money. Nothing is saved or sent.</p>
+  <nav class="foot" aria-label="Legal"><a href="../privacy/">Privacy</a><a href="../../imprint/">Imprint</a></nav>
 </section>
 
 <section class="res" id="res">
-  <span class="pill" id="rp">TOGETHER, YOU STAND AT</span>
+  <span class="pill" id="rp">Together, you stand at</span>
   <div class="num" id="num"></div>
   <div class="path" id="path"><div class="st past"><b></b>Fog</div><div class="st here"><b></b>Clear</div><div class="st"><b></b>Steady</div><div class="st"><b></b>Coast</div><div class="st"><b></b>Free</div></div>
   <p class="tag late" id="tag">You just left the fog.</p>
 </section>
 <section class="app" id="app">
-  <div class="h"><div class="icon"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M81.2 38.8A30 30 0 1 0 90 60H66" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="60" r="7" fill="#F2B4A3"/></svg></div><div><b>Stay in the clear.</b><small>GeldSpace keeps this up to date: two minutes a month, together. Your private money stays yours. Free, no bank login.</small></div></div>
+  <div class="h"><img class="icon" src="../../assets/geldspace/icon.svg" alt="" width="52" height="52"><div><b>Stay in the clear.</b><small>GeldSpace keeps this up to date: two minutes a month, together. Your private money stays yours. Free to start, no bank login.</small></div></div>
   <div class="stores">
-    <a class="store" href="https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504?ct=geldspace-networth" target="_blank" rel="noopener" data-store="ios"><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.8-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.3zM14 5.3c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>App Store</a>
-    <a class="store" href="https://play.google.com/store/apps/details?id=com.zweikarta.geldspace.app&amp;referrer=utm_source%3Dzweikarta.com%26utm_medium%3Dwebsite%26utm_campaign%3Dgeldspace-networth" target="_blank" rel="noopener" data-store="android"><svg viewBox="0 0 24 24"><path d="M3.6 1.8 13.5 12l-9.9 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1zm11 11.3 2.6 2.6-11.7 6.7 9.1-9.3zm3.9-3.9L21.3 11c.6.4.6 1.6 0 2l-2.8 1.6-2.9-2.6 2.9-2.8zM5.5 1.6l11.7 6.7-2.6 2.6-9.1-9.3z"/></svg>Google Play</a>
+    <a class="store" href="https://apps.apple.com/app/geldspace-wealth-tracker/id6824031504?ct=geldspace-networth" data-store="ios"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9c-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.8-4.1zM14 5.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>Download on the App Store</a>
+    <a class="store" href="https://play.google.com/store/apps/details?id=com.zweikarta.geldspace.app&amp;referrer=utm_source%3Dzweikarta.com%26utm_medium%3Dwebsite%26utm_campaign%3Dgeldspace-networth" data-store="android"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l.1.1 9.5-9.5v-.2L3.7 2.2l-.1.1zM16.4 15.5l-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.1c1.1.6 1.1 1.6 0 2.2l-3.8 2.1-.1.1zM16.5 15.4 13.2 12l-9.6 9.7c.4.4.9.4 1.6.1l11.3-6.4M16.5 8.6 5.2 2.2C4.5 1.8 4 1.9 3.6 2.3l9.6 9.7 3.3-3.4z"/></svg>Get it on Google Play</a>
   </div>
   <button class="again" id="again">Start again</button>
   <nav class="foot"><a href="../">About GeldSpace</a><a href="../privacy/">Privacy</a><a href="../../imprint/">Imprint</a></nav>
@@ -156,8 +161,8 @@ const ITEMS=[
  {k:'loan',side:'owe',c:'Loans',l:'Loans and car finance'},
  {k:'card',side:'owe',c:'Cards',l:'Credit cards'}];
 const CURS=['EUR','GBP','USD'];let ci=0;const sym=()=>({EUR:'€',GBP:'£',USD:'$'})[CURS[ci]];
-const fmt=v=>new Intl.NumberFormat('en-GB',{style:'currency',currency:CURS[ci],maximumFractionDigits:0}).format(v);
-const short=v=>new Intl.NumberFormat('en-GB',{style:'currency',currency:CURS[ci],notation:'compact',maximumFractionDigits:1}).format(v);
+const fmt=v=>new Intl.NumberFormat('en-GB',{style:'currency',currency:CURS[ci],currencyDisplay:'narrowSymbol',maximumFractionDigits:0}).format(v);
+const short=v=>new Intl.NumberFormat('en-GB',{style:'currency',currency:CURS[ci],currencyDisplay:'narrowSymbol',notation:'compact',maximumFractionDigits:1}).format(v);
 const V={},done=new Set();let cur=0;
 const sum=s=>ITEMS.filter(x=>x.side===s).reduce((a,x)=>a+(V[x.k]||0),0);
 
@@ -173,6 +178,8 @@ function frame(t){
   if(fog>.005){for(const p of P){p.x+=p.v+wind*(1+p.v*3);p.y+=Math.sin(t/3000+p.ph)*.15-wind*.15;
       if(p.x-p.r>FW&&wind<1)p.x=-p.r;
       cx.globalAlpha=p.a*fog;cx.drawImage(puff,p.x-p.r,p.y-p.r,p.r*2,p.r*2);}}
+  /* once the fog has fully lifted, settle and stop the loop to save battery */
+  if(fogTarget===0&&fog<.005){$('#land').style.filter='none';return;}
   $('#land').style.filter=`blur(${fog*9}px) saturate(${1-fog*.6})`;
   requestAnimationFrame(frame);
 }
@@ -184,7 +191,7 @@ function chips(){
   document.querySelectorAll('.chip[data-j]').forEach(b=>b.onclick=()=>pick(+b.dataset.j));
 }
 function pick(j){commit();cur=j;const x=ITEMS[j],a=$('#amt');
-  $('#lbl').textContent=x.l.toUpperCase();$('#lbl').className=x.side;
+  $('#lbl').textContent=x.l;$('#lbl').className=x.side;
   a.value=V[x.k]?V[x.k].toLocaleString('en-GB'):'';chips();a.focus({preventScroll:true});}
 function commit(){const x=ITEMS[cur];if($('#amt').value!==''){done.add(x.k);}
   fogTarget=1-.6*done.size/ITEMS.length;$('#lift').disabled=!done.size;}
