@@ -1,13 +1,13 @@
 # zweikarta.com
 
-Static site for the Zweikarta studio and its apps. Plain HTML and CSS, no build step. The only third-party code is Google Analytics, loaded by `assets/consent.js` only after the visitor clicks "Allow analytics". The invite and 404 pages never load it, because their URLs can carry invite codes. The net worth page doesn't load it either: it promises that nothing is sent, and installs from it are counted with store campaign tokens (`ct=geldspace-networth`, `utm_campaign=geldspace-networth`).
+Static site for the Zweikarta studio and its apps. Plain HTML and CSS, no build step. The only third-party code is Google Analytics, loaded by `assets/consent.js` only after the visitor clicks "Allow analytics". The invite and 404 pages never load it, because their URLs can carry invite codes.
 
 ## Pages
 | URL | File |
 |---|---|
 | `/` | `index.html` (studio page) |
 | `/geldspace/` | `geldspace/index.html` |
-| `/geldspace/net-worth/` | `geldspace/net-worth/index.html` (net worth page: add shared numbers, see where you stand; nothing is saved or sent) |
+| `/geldspace/net-worth/` | `geldspace/net-worth/index.html` (net worth page: add shared numbers, see where you stand; the numbers are never saved or sent) |
 | `/geldspace/privacy/` | `geldspace/privacy/index.html` (Play Console privacy policy URL) |
 | `/geldspace/delete/` | `geldspace/delete/index.html` (Play Console account deletion URL) |
 | `/imprint/` | `imprint/index.html` (Impressum, § 5 DDG) |
@@ -21,6 +21,8 @@ Posts are Markdown files in `content/blog/<slug>.md`, with images in `assets/blo
 
 ## Analytics
 Google Analytics 4 runs only with consent. The measurement ID is `GA_ID` at the top of `assets/consent.js`; if it is set back to the placeholder `G-XXXXXXXXXX`, the script does nothing. A new page gets `<script src=".../assets/consent.js" defer></script>` in its head. If analytics changes, update `privacy/index.html` too.
+
+Events (only with consent): `store_click` on any store link (consent.js, `campaign` = the link's `ct` / `utm_campaign`). The net worth page also sends `networth_start` (first number typed) and `networth_lift` (pressed "Lift the fog", with `items_filled` 0–7 and `currency`), once per visit, never amounts, and nothing in `?demo=1`. Its store links use campaign `geldspace-networth`. The page moves the consent banner to the top so it doesn't cover the input.
 
 ## SEO
 Each page has a canonical link and Open Graph tags; the home page also has Organization and WebSite structured data. When you add or change a page, add it to `sitemap.xml` (with a new `lastmod`). Link preview images (1200×630) are in `assets/og/`: `studio.jpg` for studio and legal pages, `geldspace.jpg` for GeldSpace pages. Pages that should stay out of search, like the invite page and the 404, carry `<meta name="robots" content="noindex">`.

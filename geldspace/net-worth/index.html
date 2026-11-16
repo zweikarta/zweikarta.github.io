@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Where do we stand? · GeldSpace</title>
-<meta name="description" content="Add what you share, roughly. Watch the fog lift and see where you stand together. Free, nothing is saved or sent.">
+<meta name="description" content="Add what you share, roughly. Watch the fog lift and see where you stand together. Free, and your numbers are never saved or sent.">
 <meta name="theme-color" content="#F2F2F7">
 <link rel="canonical" href="https://zweikarta.com/geldspace/net-worth/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Zweikarta">
 <meta property="og:title" content="Where do we stand? Lift the fog in two minutes">
-<meta property="og:description" content="Add what you share, roughly. See where you stand together. Free, nothing is saved or sent.">
+<meta property="og:description" content="Add what you share, roughly. See where you stand together. Free, and your numbers are never saved or sent.">
 <meta property="og:url" content="https://zweikarta.com/geldspace/net-worth/">
 <meta property="og:image" content="https://zweikarta.com/assets/og/geldspace.jpg">
 <meta property="og:image:width" content="1200">
@@ -109,7 +109,11 @@ body.lifted .rays{opacity:1}
  body.lifted .res,body.lifted .app{position:relative;top:auto;left:auto;bottom:auto;margin:84px auto 0;transform:none}
  body.lifted .app{display:none;margin:24px auto 24px}body.lifted .app.show{display:block}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}}
-</style></head><body>
+/* Consent banner (assets/consent.js) sits at the top here, so it never covers the input dock */
+.zk-consent{bottom:auto!important;top:68px}
+</style>
+<script src="../../assets/consent.js" defer></script>
+</head><body>
 <div class="sky"></div><div class="sky2"></div>
 <div class="land" id="land" aria-hidden="true">
   <div class="sun"><i class="rays"></i></div>
@@ -128,8 +132,8 @@ body.lifted .rays{opacity:1}
   <div class="active"><div class="f"><label id="lbl" for="amt">Shared accounts and cash</label><div class="in"><span class="s">€</span><input id="amt" inputmode="numeric" autocomplete="off" placeholder="0"></div></div><button class="ok" id="ok" aria-label="Next">→</button></div>
   <div class="chips" id="chips"></div>
   <button class="lift" id="lift" disabled>Lift the fog</button>
-  <p class="note">Only shared money. Nothing is saved or sent.</p>
-  <nav class="foot" aria-label="Legal"><a href="../privacy/">Privacy</a><a href="../../imprint/">Imprint</a></nav>
+  <p class="note">Only shared money. Your numbers never leave this page.</p>
+  <footer><nav class="foot" aria-label="Legal"><a href="../../privacy/">Privacy</a><a href="../../imprint/">Imprint</a></nav></footer>
 </section>
 
 <section class="res" id="res">
@@ -151,6 +155,11 @@ body.lifted .rays{opacity:1}
 
 <script>
 const $=s=>document.querySelector(s);
+/* Analytics: GA events go out only if the visitor allowed analytics (consent.js defines gtag then).
+   Never amounts or results: only that a step happened, how many of the 7 items were filled, and the currency.
+   Store clicks are counted by consent.js as "store_click" with campaign geldspace-networth. */
+const DEMO=new URLSearchParams(location.search).has('demo');const sent=new Set();
+const track=(name,p)=>{if(DEMO||sent.has(name)||typeof gtag!=='function')return;sent.add(name);gtag('event',name,Object.assign({page:'networth'},p||{}));};
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const ITEMS=[
  {k:'cash',side:'own',c:'Cash',l:'Shared accounts and cash'},
@@ -195,7 +204,7 @@ function pick(j){commit();cur=j;const x=ITEMS[j],a=$('#amt');
   a.value=V[x.k]?V[x.k].toLocaleString('en-GB'):'';chips();a.focus({preventScroll:true});}
 function commit(){const x=ITEMS[cur];if($('#amt').value!==''){done.add(x.k);}
   fogTarget=1-.6*done.size/ITEMS.length;$('#lift').disabled=!done.size;}
-$('#amt').addEventListener('input',e=>{const a=e.target,d=a.value.replace(/\D/g,'').slice(0,10);V[ITEMS[cur].k]=+d||0;a.value=d?(+d).toLocaleString('en-GB'):'';});
+$('#amt').addEventListener('input',e=>{track('networth_start');const a=e.target,d=a.value.replace(/\D/g,'').slice(0,10);V[ITEMS[cur].k]=+d||0;a.value=d?(+d).toLocaleString('en-GB'):'';});
 function advance(){commit();if(!done.has(ITEMS[cur].k)){done.add(ITEMS[cur].k);V[ITEMS[cur].k]=0;commit();}
   const nxt=ITEMS.findIndex((x,j)=>j>cur&&!done.has(x.k));if(nxt>=0)pick(nxt);else{chips();$('#lift').focus();}}
 $('#ok').onclick=advance;$('#amt').addEventListener('keydown',e=>{if(e.key==='Enter')advance();});
@@ -210,6 +219,7 @@ function scramble(el,v){
 }
 async function lift(){
   commit();const own=sum('own'),owe=sum('owe'),net=own-owe;
+  track('networth_lift',{items_filled:done.size,currency:CURS[ci]});
   document.body.classList.add('lifted');$('#amt').blur();
   wind=reduce?0:4;fogTarget=0;
   await wait(1800);
@@ -223,7 +233,7 @@ async function lift(){
 $('#lift').onclick=lift;
 $('#again').onclick=()=>{location.href=location.pathname;};
 $('#cur').onclick=()=>{ci=(ci+1)%3;$('#cur').textContent=sym();document.querySelectorAll('.s').forEach(s=>s.textContent=sym());chips();};
-if(new URLSearchParams(location.search).has('demo')){$('#cur').insertAdjacentHTML('beforebegin','<span class="demo">EXAMPLE</span>');Object.assign(V,{cash:8400,inv:21000,home:310000,other:9000,mort:214000,loan:6500,card:900});ITEMS.forEach(x=>done.add(x.k));cur=6;commit();$('#amt').value='900';}
+if(DEMO){$('#cur').insertAdjacentHTML('beforebegin','<span class="demo">EXAMPLE</span>');Object.assign(V,{cash:8400,inv:21000,home:310000,other:9000,mort:214000,loan:6500,card:900});ITEMS.forEach(x=>done.add(x.k));cur=6;commit();$('#amt').value='900';}
 chips();pick(cur);
 </script>
 </body></html>
