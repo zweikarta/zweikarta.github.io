@@ -1,12 +1,13 @@
 # zweikarta.com
 
-Static site for the Zweikarta studio and its apps. Plain HTML and CSS, no build step. The only third-party code is Google Analytics, loaded by `assets/consent.js` only after the visitor clicks "Allow analytics". The invite and 404 pages never load it, because their URLs can carry invite codes.
+Static site for the Zweikarta studio and its apps. Plain HTML and CSS, no build step. The only third-party code is Google Analytics, loaded by `assets/consent.js` only after the visitor clicks "Allow analytics". The invite and 404 pages never load it, because their URLs can carry invite codes. The net worth page doesn't load it either: it promises that nothing is sent, and installs from it are counted with store campaign tokens (`ct=geldspace-networth`, `utm_campaign=geldspace-networth`).
 
 ## Pages
 | URL | File |
 |---|---|
 | `/` | `index.html` (studio page) |
 | `/geldspace/` | `geldspace/index.html` |
+| `/geldspace/net-worth/` | `geldspace/net-worth/index.html` (net worth page: add shared numbers, see where you stand; nothing is saved or sent) |
 | `/geldspace/privacy/` | `geldspace/privacy/index.html` (Play Console privacy policy URL) |
 | `/geldspace/delete/` | `geldspace/delete/index.html` (Play Console account deletion URL) |
 | `/imprint/` | `imprint/index.html` (Impressum, § 5 DDG) |
@@ -52,4 +53,4 @@ Note: on the free plan the TXT record is public, so the Gmail address can be loo
 `assets/geldspace/*.png` are rendered from the design canvas (MktScreens artboard: OvLoanA → home-mine, OvOurs → home-ours, MonthlyHub → monthly). Re-export them when the designs change.
 
 ## Fonts
-Bricolage Grotesque (SIL Open Font License, `assets/fonts/OFL.txt`) is self-hosted in `assets/fonts/`, so the site makes no requests to Google Fonts. Home and GeldSpace pages use `assets/studio.css`; legal pages use `assets/site.css`.
+Bricolage Grotesque (SIL Open Font License, `assets/fonts/OFL.txt`) is self-hosted in `assets/fonts/`, so the site makes no requests to Google Fonts. Inter 500–800 (SIL Open Font License, `assets/fonts/OFL-Inter.txt`, from `@fontsource/inter` 5.1.0) is self-hosted the same way for the GeldSpace net worth page. `assets/geldspace/icon.svg` is the GeldSpace app icon (BRD-01) as SVG. Home and GeldSpace pages use `assets/studio.css`; legal pages use `assets/site.css`.
