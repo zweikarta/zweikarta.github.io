@@ -5,7 +5,7 @@ description: Net worth is what you own minus what you owe. How to work it out as
 date: 2026-11-18
 app: geldspace
 image: cover.jpg
-image_alt: A sheet listing what a couple owns and owes, each line marked Mine or Ours, with three totals at the bottom.
+image_alt: Cover: three bars showing what you own, minus what you owe, equals Ours.
 ---
 
 ::: answer
