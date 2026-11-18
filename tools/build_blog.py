@@ -23,6 +23,9 @@ A post starts with a front matter block:
     draft: true (optional: skipped by the build)
     ---
 
+A short, direct answer to the post's question can go between `::: answer` and `:::`. It is
+shown above the takeaways, so search engines and AI answers can quote it.
+
 A closing block about the app goes between `::: app <phone screenshot>` and `:::`. It is
 shown as a card in the app's colours with the screenshot and a link to the app page.
 
@@ -315,9 +318,21 @@ def build_post(p, all_posts):
     app = APPS.get(p.get("app", ""))
     app_block = ""
     takeaway_block = ""
+    answer_block = ""
     faq_block = ""
     faq_items = []
     md = p["body"]
+
+    # Extract short answer block (::: answer ... :::)
+    am = re.search(r"^::: answer\n(.*?)^:::$", md, re.S | re.M)
+    if am:
+        inner_a, _ = render_body(am.group(1), slug)
+        answer_block = f"""
+  <aside class="post-answer" aria-label="Short answer">
+    <p class="kicker">The short answer</p>
+{inner_a}
+  </aside>"""
+        md = md[:am.start()] + md[am.end():]
 
     # Extract takeaway block (::: takeaway ... :::)
     tm = re.search(r"^::: takeaway\n(.*?)^:::$", md, re.S | re.M)
@@ -490,7 +505,7 @@ def build_post(p, all_posts):
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a></nav>
   <h1>{inline(p['title'])}</h1>
   <p class="post-meta"><time datetime="{p['date']}">{nice_date(p['date'])}</time> · {minutes} min read · {byline_html}</p>
-  <figure class="post-cover">{picture(slug, p['image'], 1200, 630, p['image_alt'], "(max-width: 46rem) 100vw, 736px", ' fetchpriority="high"')}</figure>{takeaway_block}
+  <figure class="post-cover">{picture(slug, p['image'], 1200, 630, p['image_alt'], "(max-width: 46rem) 100vw, 736px", ' fetchpriority="high"')}</figure>{answer_block}{takeaway_block}
   <nav class="post-toc" aria-label="In this post"><p class="kicker">In this post</p><ol>{toc_html}</ol></nav>
   <div class="post-body">
 {body}

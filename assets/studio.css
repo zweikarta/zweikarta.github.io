@@ -308,6 +308,16 @@ footer.foot a { color: var(--on-night-muted); }
 .post-meta a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .post-meta a:hover { color: var(--fg); }
 
+.post-answer {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 22px 26px;
+  margin: 0 0 24px;
+}
+.post-answer .kicker { color: var(--ours); margin-bottom: 8px; }
+.post-answer p:last-child { margin: 0; font-size: 1.12rem; line-height: 1.65; }
+
 .post-takeaways {
   background: var(--surface);
   border: 1px solid var(--line);
