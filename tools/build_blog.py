@@ -21,6 +21,12 @@ A post starts with a front matter block:
     image: cover.jpg (1200x630, in assets/blog/<slug>/)
     image_alt: Text for the cover image
     draft: true (optional: skipped by the build)
+
+A post with a date in the future is skipped until that date (UTC), so posts can be merged
+ahead of time. The daily workflow .github/workflows/publish-scheduled-posts.yml rebuilds
+the blog each morning and pushes the result, which makes scheduled posts appear on their
+date. To see future posts locally, run: python3 tools/build_blog.py --preview
+(don't commit a --preview build).
     ---
 
 A short, direct answer to the post's question can go between `::: answer` and `:::`. It is
@@ -37,6 +43,7 @@ The body is a small Markdown subset: ## and ### headings, paragraphs, - and 1. l
 Image files live in assets/blog/<slug>/. Width and height are read from the file.
 """
 import datetime
+import sys
 import html
 import re
 import struct
@@ -596,9 +603,21 @@ def update_sitemap(posts):
     path.write_text("\n".join(lines[:end] + entries + lines[end:]) + "\n", encoding="utf-8")
 
 
+def is_live(p, today, preview):
+    """A post goes live on its date (UTC). Drafts never; future posts only with --preview."""
+    if p.get("draft") == "true":
+        return False
+    return preview or p["date"] <= today
+
+
 def main():
+    preview = "--preview" in sys.argv
+    today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
     posts = [parse(f) for f in sorted(SRC.glob("*.md"))]
-    posts = sorted((p for p in posts if p.get("draft") != "true"), key=lambda p: p["date"], reverse=True)
+    posts = sorted((p for p in posts if is_live(p, today, preview)), key=lambda p: p["date"], reverse=True)
+    waiting = [f.stem for f in sorted(SRC.glob("*.md")) if not preview and parse(f)["date"] > today]
+    if waiting:
+        print("Scheduled, not built yet: " + ", ".join(waiting))
     for p in posts:
         build_post(p, posts)
     build_index(posts)

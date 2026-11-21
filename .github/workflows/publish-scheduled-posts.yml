@@ -1,0 +1,47 @@
+# Publishes blog posts on their date.
+# Posts in content/blog/ with a future `date:` are merged ahead of time but skipped by the
+# builder until that day (UTC). Every morning this job rebuilds the blog and, if a post
+# went live, commits the built pages to main. GitHub Pages then publishes them.
+name: Publish scheduled blog posts
+
+on:
+  schedule:
+    - cron: "15 5 * * *" # 05:15 UTC daily (06:15 Berlin in winter)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publish-scheduled-posts
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the blog
+        run: python3 tools/build_blog.py
+
+      - name: Commit and push if a post went live
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing new to publish today."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A blog sitemap.xml
+          git commit -m "Blog: publish scheduled posts for $(date -u +%F)"
+          git push origin HEAD:main
+          # Ask Pages to rebuild in case the push alone doesn't trigger it.
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
